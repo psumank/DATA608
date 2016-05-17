@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://d3js.org/topojson.v1.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://rawgit.com/evanplaice/jquery-csv/master/src/jquery.csv.js"></script>
+  
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script type="text/javascript" src='https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1","packages":["geomap"]}]}'></script>
+
+    <style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: Helvetica, Arial, sans-serif;
+			background-color: #eee;
+		}
+        
+        svg {
+			background-color: gray;
+		}
+        
+		#container {
+			width: 1200px;
+			margin: 25px auto 25px auto;
+			padding: 50px 50px 50px 50px;
+			background-color: white;
+			box-shadow: 0 0 20px #ccc;
+		}
+        
+
+		h1 {
+			margin-bottom: 25px;
+			font-size: 24px;
+		}
+
+		h2 {
+			margin-top: 30px;
+			font-size: 14px;
+		}
+
+		p {
+			margin-bottom: 25px;
+			font-size: 14px;
+			line-height: 18px;
+		}
+        
+        #parent {
+            display : flex;
+        }
+
+		.USMapContainer {
+			/* Place the containers side-by-side! */
+			flex: 1;
+			width: 55%;
+		}
+        
+        .BarContainer {
+			/* Place the chart containers side-by-side! */
+			display: inline-block;
+			width: 43%;
+		}
+        
+        .ARMapContainer {
+			/* Place the containers side-by-side! */
+			flex: 1;
+			width: 69%;
+		}
+        
+        .TableContainer {
+			/* Place the chart containers side-by-side! */
+			display: inline-block;
+			width: 29%;
+		}
+
+		#buttonContainer {
+			margin-bottom: 10px;
+		}
+
+		button {
+			padding: 15px;
+		}
+
+		#footer p {
+			margin-top: 50px;
+			margin-bottom: 0;
+			text-align: left;
+			font-size: 10px;
+			color: gray;
+		}
+
+		/* Chart styles */
+
+		svg {
+			display: block;
+			margin-bottom: 10px;
+			background-color: white;
+		}
+
+		g.bar {
+			cursor: pointer;
+		}
+
+		g.bar text {
+			font-family: sans-serif;
+			font-size: 11px;
+			fill: white;
+			font-style: bold;
+			text-anchor: middle;
+			opacity: 0;
+		}
+
+		g.bar.highlight text {
+			opacity: 1;
+		}
+
+		g.bar.highlight rect {
+			fill: Maroon;
+		}
+
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: black;
+			shape-rendering: crispEdges;
+		}
+		
+		.axis text {
+			font-family: sans-serif;
+			font-size: 11px;
+		}
+
+
+        .bar {
+          fill: steelblue;
+        }
+
+        .x.axis path {
+          display: none;
+        }
+        
+        #tooltip {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 10;
+			margin: 0;
+			padding: 10px;
+			width: auto;
+			min-width: 15px;
+			height: auto;
+			color: white;
+			font-family: sans-serif;
+			font-size: 12px;
+			text-align: left;
+			background-color: rgba(0, 0, 0, 0.75);
+			opacity: 0;
+			pointer-events: none;
+	}
+
+	#tooltip p {
+		margin: 0;
+	}
+
+    #tooltip p.value {
+		font-weight: bold;
+	}
+
+   .bubble {
+        fill-opacity: 1;
+        stroke: #f00;
+        fill: #ff0;
+        stroke-width: 2px;
+    }
+        
+    .bubblecrops {
+        fill-opacity: .5;
+        stroke: #0f0;
+        fill: #070;
+        stroke-width: .5px; 
+    }
+        
+    .bubbleProperty {
+        fill-opacity: .5;
+        stroke: #fff;
+        fill: #926;
+        stroke-width: .5px; 
+    }
+        
+    table a:visited {
+        color: #999999;
+        font-weight:bold;
+        text-decoration:none;
+    }
+    table a:active,
+    table a:hover {
+        color: #bd5a35;
+        text-decoration:underline;
+    }
+    table {
+        font-family:Arial, Helvetica, sans-serif;
+        color:#666;
+        font-size:12px;
+        text-shadow: 1px 1px 0px #fff;
+        background:#eaebec;
+        margin:20px;
+        border:#ccc 1px solid;
+
+        -moz-border-radius:3px;
+        -webkit-border-radius:3px;
+        border-radius:3px;
+
+        -moz-box-shadow: 0 1px 2px #d1d1d1;
+        -webkit-box-shadow: 0 1px 2px #d1d1d1;
+        box-shadow: 0 1px 2px #d1d1d1;
+    }
+    table th {
+        padding:21px 25px 22px 25px;
+        border-top:1px solid #fafafa;
+        border-bottom:1px solid #e0e0e0;
+
+        background: #ededed;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+        background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+    }
+    table th:first-child {
+        text-align: left;
+        padding-left:20px;
+    }
+    table tr:first-child th:first-child {
+        -moz-border-radius-topleft:3px;
+        -webkit-border-top-left-radius:3px;
+        border-top-left-radius:3px;
+    }
+    table tr:first-child th:last-child {
+        -moz-border-radius-topright:3px;
+        -webkit-border-top-right-radius:3px;
+        border-top-right-radius:3px;
+    }
+    table tr {
+        text-align: center;
+        padding-left:20px;
+    }
+    table td:first-child {
+        text-align: left;
+        padding-left:20px;
+        border-left: 0;
+    }
+    table td {
+        padding:18px;
+        border-top: 1px solid #ffffff;
+        border-bottom:1px solid #e0e0e0;
+        border-left: 1px solid #e0e0e0;
+
+        background: #fafafa;
+        background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+        background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+    }
+    table tr.even td {
+        background: #f6f6f6;
+        background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+        background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+    }
+    table tr:last-child td {
+        border-bottom:0;
+    }
+    table tr:last-child td:first-child {
+        -moz-border-radius-bottomleft:3px;
+        -webkit-border-bottom-left-radius:3px;
+        border-bottom-left-radius:3px;
+    }
+    table tr:last-child td:last-child {
+        -moz-border-radius-bottomright:3px;
+        -webkit-border-bottom-right-radius:3px;
+        border-bottom-right-radius:3px;
+    }
+    table tr:hover td {
+        background: #f2f2f2;
+        background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+        background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+    }
+        
+ </style>
+</head>
+<body>
+
+    <div id="tooltip">
+	   <p class="name"></p>
+	   <p class="value"></p>
+    </div>
+    
+    <div id='col_chart_html_tooltip'></div>
+
+	<div id="container">
+
+		<h1>Visualize the Storm Events Impacts </h1>
+        <p>by Suman K Polavarapu</p>    
+        <br>
+        <p>This project was completed as part of CUNY DATA608's curriculum. To see other projects, please <a href="http://jlaurito.github.io/CUNY_IS608/">click here for the homepage</a>.</p>
+        <br>
+        
+		<p>Storm Data is an official publication of the National Oceanic and Atmospheric Administration (NOAA) which documents the occurrence of storms and other significant weather phenomena having sufficient intensity to cause loss of life, injuries, significant property damage, and/or disruption to commerce. A storm includes various weather conditions such as - Flood, Ice Storm, Tornado, Heavy rain etc</p>
+        
+        <p>The intent of the project is to visualize the state level summary of fatalities caused by various weather events in USA. And also, provide the county level impacts in the <strong>State of Arkansas.</strong></p>
+
+        <hr width="1200", align="left">
+        
+        <br/>
+        
+        <div id="year">
+            <label>Year:</label>
+        </div>
+        
+        <div id="parent">
+            <div class="USMapContainer" id="mapSummary">
+                <h2>All States - Fatality Choropleth </h2>
+                <span style="font-size: 11px; color: gray;">'Deaths' include both direct and indirect</span>
+                <span id="usMap"></span>
+            </div>
+
+            <div class="BarContainer" id="eventSummary">
+                <h2>Major Storm Events</h2>
+                <span id="usEventsBarChart"></span>
+            </div>
+        </div>
+        <br>
+        <hr width="1200", align="left" style="border-top: dashed 2px;color:yellow" />
+
+        <div>
+                <h2>State of Arkansas - Population Choropleth - County Level Storm Impact</h2>
+        </div>
+        <br>
+        <div id="stormEvent">
+            <label>Storm Event:</label>
+        </div>
+        <br>
+
+        <div id="parent">
+            <div id="ARMap">
+            </div>
+            
+            <div class="ARMapContainer" id="ARMap">
+            </div>
+            
+            <div class="TableContainer" id="tbl" >
+                
+                </br></br></br>
+                <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
+                    <!-- Table Header -->
+                    <thead>
+                        <tr>
+                            <th id="tbl-event-type" style="color: blue; font-weight: bold;"></th>
+                            <th id="tbl-event-year" style="color: blue"></th>
+                        </tr>
+                    </thead>
+                    <thead>
+                        <tr>
+                            <th>Impact Type</th>
+                            <th>Measure (Count or Amount)</th>
+                        </tr>
+                    </thead>
+                    <!-- Table Header -->
+
+                    <!-- Table Body -->
+                    <tbody>
+                        <tr>
+                            <td style="color:red;font-weight: bold;">Deaths</td>
+                            <td style="color:red" id = "dcount"></td>
+                        </tr>
+
+                        <tr class="even">
+                            <td style="color:red;font-weight: bold;">Injuries</td>
+                            <td style="color:red" id = "icount"></td>
+                        </tr>
+                        <tr>
+                            <td style="color:green;font-weight: bold;">Crops Damage</td>
+                            <td style="color:green" id = "cdamage"></td>
+                        </tr>
+
+                        <tr class="even">
+                            <td style="color:purple;font-weight: bold;">Property Damage</td>
+                            <td style="color:purple" id= "pdamage"></td>
+                        </tr>
+
+                    </tbody>
+                    <!-- Table Body -->
+                </table>
+            </div>
+            
+        </div>
+        
+        
+		<div id="footer">
+            <p><strong>(1) Storm Data Source: </strong> <a href="http://www.ncdc.noaa.gov/stormevents/ftp.jsp">NOAA.GOV</a><br/>
+            <strong>(2) Arkansas counties topo json Source: </strong>
+                <a href="https://raw.githubusercontent.com/UIUXEngineering-Data-Dist/data-dist-topojson-us-zipcodes/master/2013/us/states/counties/ar-counties.json">AR-COUNTIES.JSON</a><br/>
+             <strong>(3) Arkansas county level population Source: </strong> <a href="http://www.census.gov/data.html">US Census Bureau</a>
+            </p>
+		</div>
+        
+        
+
+	</div>
+	
+
+
+	<script type="text/javascript">
+
+        <!-- Add a drop down of years, with 2015 as pre-selected -->
+        var years = [ "2014", "2015"];
+        
+        var selYear = "2015";
+        var selEvent = "Tornado";
+
+        var select = d3.select('#year')
+          .append('select')
+            .attr('class','select')
+            .on('change',onchange);
+
+        var options = select
+          .selectAll('option')
+            .data(years).enter()
+            .append('option')
+                .text(function (d) { return d; })
+            .property("selected", function(d){ return d === "2015"; });
+
+        function onchange() {
+            selectValue = d3.select('select').property('value');
+            selYear = selectValue;
+            drawMapVisualization(selectValue);
+            updateUSEventsSummaryData(selectValue);
+            updateARMap();
+        }
+        
+         <!-- Add a drop down of events for Arkansas map, with Tornado as pre-selected -->
+        var stormType = [ "Tornado", "Flash Flood", "Flood", "Hail", "Heavy Rain", "High Wind", "Ice Storm",
+                        "Lightning", "Strong Wind", "Thunderstorm Wind", "Wildfire", "Winter Storm"];
+
+        var eventselect = d3.select('#stormEvent')
+          .append('select')
+          .attr('id','selectStromType')
+          .on('change',onchangeStormType);
+
+        var eventoptions = eventselect
+          .selectAll('option')
+            .data(stormType).enter()
+            .append('option')
+            .text(function (d) { return d; })
+            .property("selected", function(d){ return d == "Tornado"; });
+
+        function onchangeStormType() {
+            selectValue = d3.select('#selectStromType').property('value')
+            selEvent = selectValue;
+            updateARMap();
+            console.log('selected value is:' + selectValue)
+        };
+
+       // google.charts.load('current', {'packages': ['geomap']});
+        google.charts.setOnLoadCallback( drawMapVisualization(2015));
+
+        
+ 
+       function drawMapVisualization(year) {
+         $.get("data/sei_StateImpactSummary.csv", function(csvString) {
+
+          var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
+
+          console.log(arrayData.length);
+
+          var data = new google.visualization.DataTable();
+             
+          $.get("data/sei_StateEvents.csv", function(csvEventsString){
+              
+                 var seData = $.csv.toArrays(csvEventsString, {onParseValue: $.csv.hooks.castToScalar});
+                  
+                 console.log("se events for state: " + seData.length);
+
+                  data.addColumn('string', 'STATE');
+                  data.addColumn('number', 'DEATH_COUNT');
+                  data.addColumn({type:'string', role:'tooltip', 'p': {'html': true}});
+                  for(i = 0; i < arrayData.length; i++) {
+                        var tt = '';
+                        var cnt = 0;
+                        if (year == arrayData[i][0]) {
+
+                            //for tooltip of storm events caused the deaths.
+                            for(j = 0; j< seData.length; j++){
+                                if (year == seData[j][0] && arrayData[i][1] == seData[j][1])
+                                {
+                                     if (cnt < +seData[j][3])
+                                     {
+                                        tt = seData[j][2];
+                                        cnt =  +seData[j][3]
+                                     }
+                                }
+                                else{
+                                    if ( tt != '' ) break;
+                                }
+                            }
+                            
+                            data.addRow([arrayData[i][1], +arrayData[i][2], 
+                                         ( arrayData[i][1] + " ( Primary:" + tt + " )") ] );
+                        }
+                  }
+                  var options = {tooltip: {isHtml: true}};
+                  options['focusTarget'] = 'category';
+                  options['tooltip'] = { isHtml: true };
+                  options['region'] = 'US';
+                  options['colors'] =['0xfee8c8','0xfdbb84','0xe34a33'];
+                 // options['dataMode'] = 'markers'; //this is taking a hell lot of time to display!
+                 
+
+                  var container = document.getElementById('usMap');
+                  var geomap = new google.visualization.GeoMap(container);
+                  geomap.draw(data, options );
+              
+       });
+             
+    });
+  }
+        
+    var usEventsData;
+    var svg1;
+        
+    function drawUSEventsSummary(year) {
+        
+        var margin = {top: 2, right: 0, bottom: 45, left: 40},
+        width = 525  - margin.left - margin.right,
+        height = 410 - margin.top - margin.bottom;
+        
+       var color = d3.scale.ordinal()
+            .range(["#ff8c00", "#98abc5"]);
+        
+         var x = d3.scale.ordinal()
+            .rangeRoundBands([10, width], .1);
+
+        var y = d3.scale.sqrt().domain([10, 1000])
+            .rangeRound([height, 0]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(d3.format(".2s"));
+
+        var svg = d3.select("#usEventsBarChart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        svg1 = svg;
+
+        d3.csv("data/sei_EventImpactSummary.csv", function(error, data) {
+          if (error) throw error;
+
+          usEventsData = data;
+          data = data.filter(function(e) {
+                return (e['YEAR'] == year)
+            });
+
+          color.domain(d3.keys(data[0]).filter(function(key) { return (key != "YEAR" & key != "EVENT_TYPE"); }));
+
+          data.forEach(function(d) {
+                var y0 = 0;
+              
+                d.impacts = color.domain().map(function(name) { 
+                    console.log('name:'+ name + 'cnt' +  d[name] + 'y0' + y0);
+                    return {name: name, y0: y0, y1: y0 += +d[name]}; 
+                });
+              
+                console.log('impacts:' + d.impacts);
+              
+                d.total = d.impacts[d.impacts.length - 1].y1;
+          });
+
+          data.sort(function(a, b) { return b.total - a.total; });
+
+       
+            
+          x.domain(data.map(function(d) { return d.EVENT_TYPE; }));
+          y.domain([0, d3.max(data, function(d) { return d.total; })]);
+
+          svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis)
+              .selectAll("text")  
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-20)" );
+
+          svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Impact");
+
+          var EVENT_TYPE = svg.selectAll(".EVENT_TYPE")
+              .data(data)
+              .enter().append("g")
+              .attr("class", "g")
+              .attr("id", "usEventSumBar")
+              .attr("transform", function(d) { return "translate(" + x(d.EVENT_TYPE) + ",0)"; });
+
+          EVENT_TYPE.selectAll("rect")
+              .data(function(d) { return d.impacts; })
+            .enter().append("rect")
+              .attr("width", x.rangeBand())
+              .attr("y", function(d) { return y(d.y1); })
+              .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+              .style("fill", function(d) { return color(d.name); })
+              .append("title").text(function(d) { return d.name + " : " + d.y1; });
+            
+
+          var legend = svg.selectAll(".legend")
+              .data(color.domain().slice().reverse())
+            .enter().append("g")
+              .attr("class", "legend")
+              .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+          legend.append("rect")
+              .attr("x", width - 18)
+              .attr("width", 18)
+              .attr("height", 18)
+              .style("fill", color);
+
+          legend.append("text")
+              .attr("x", width - 24)
+              .attr("y", 9)
+              .attr("dy", ".35em")
+              .style("text-anchor", "end")
+              .text(function(d) { if (d == 'INJURY_COUNT') return "Injuries"; else return "Deaths"; });
+
+        });
+    }
+        
+    // ** Update us events data section (Called from the dropdown change)
+    function updateUSEventsSummaryData(year) {
+
+         var margin = {top: 2, right: 0, bottom: 45, left: 40},
+        width = 525  - margin.left - margin.right,
+        height = 410 - margin.top - margin.bottom;
+
+        
+         var x = d3.scale.ordinal()
+            .rangeRoundBands([10, width], .1);
+
+        var y = d3.scale.sqrt().domain([10, 1000])
+            .rangeRound([height, 0]);
+
+
+        var color = d3.scale.ordinal()
+            .range(["#ff8c00", "#98abc5"]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left")
+            .tickFormat(d3.format(".2s"));
+
+        svg = svg1;
+
+        d3.csv("data/sei_EventImpactSummary.csv", function(error, data) {
+          if (error) throw error;
+
+          usEventsData = data;
+          data = data.filter(function(e) {
+                return (e['YEAR'] == year)
+            });
+
+          color.domain(d3.keys(data[0]).filter(function(key) { return (key != "YEAR" & key != "EVENT_TYPE"); }));
+
+          data.forEach(function(d) {
+                var y0 = 0;
+              
+                d.impacts = color.domain().map(function(name) { 
+                    console.log('name:'+ name + 'cnt' +  d[name] + 'y0' + y0);
+                    return {name: name, y0: y0, y1: y0 += +d[name]}; 
+                });
+              
+          
+                d.total = d.impacts[d.impacts.length - 1].y1;
+          });
+
+          data.sort(function(a, b) { return b.total - a.total; });
+
+          x.domain(data.map(function(d) { return d.EVENT_TYPE; }));
+          y.domain([0, d3.max(data, function(d) { return d.total; })]);
+
+          var bars = svg.selectAll('rect').data(data);
+          var bars2 = svg.selectAll('g').data(data);
+         // var ticks = svg.selectAll('gtick').data(data);
+            bars2.selectAll(".tick")
+                    .each(function (d, i) {
+                                    this.remove();
+            });
+
+          // Remove
+          bars.exit().remove();
+          bars2.exit().remove();
+          //ticks.exit().remove();
+            
+            svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis)
+              .selectAll("text")  
+                .style("text-anchor", "end")
+                .attr("dx", "-.8em")
+                .attr("dy", ".15em")
+                .attr("transform", "rotate(-20)" );
+
+          svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis)
+            .append("text")
+              .attr("transform", "rotate(-90)")
+              .attr("y", 6)
+              .attr("dy", ".71em")
+              .style("text-anchor", "end")
+              .text("Impact");
+
+          var EVENT_TYPE = svg.selectAll(".EVENT_TYPE")
+              .data(data)
+            .enter().append("g")
+              .attr("class", "g")
+              .attr("id", "usEventSumBar")
+              .attr("transform", function(d) { return "translate(" + x(d.EVENT_TYPE) + ",0)"; });
+
+          EVENT_TYPE.selectAll("rect")
+              .data(function(d) { return d.impacts; })
+            .enter().append("rect")
+              .attr("title", function(d) { return d.name + " : " + d.value; })
+              .attr("width", x.rangeBand())
+              .attr("y", function(d) { return y(d.y1); })
+              .attr("height", function(d) { return y(d.y0) - y(d.y1); })
+              .style("fill", function(d) { return color(d.name); })
+              .append("title").text(function(d) { return d.name + " : " + d.y1; });
+
+          var legend = svg.selectAll(".legend")
+              .data(color.domain().slice().reverse())
+            .enter().append("g")
+              .attr("class", "legend")
+              .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+          legend.append("rect")
+              .attr("x", width - 18)
+              .attr("width", 18)
+              .attr("height", 18)
+              .style("fill", color);
+
+          legend.append("text")
+              .attr("x", width - 24)
+              .attr("y", 9)
+              .attr("dy", ".35em")
+              .style("text-anchor", "end")
+              .text(function(d) { if (d == 'INJURY_COUNT') return "Injuries"; else return "Deaths"; });
+
+        });
+    }
+        
+    var radius = d3.scale.sqrt().domain([0, 1e3]).range([0, 10]);
+    var radius2 = d3.scale.sqrt().domain([0, 1e6]).range([0, 15]);
+  
+
+    var arStormData;
+        
+    function loadARMap()
+    {
+        d3.select("#ARSvg").remove();
+        
+        // Set window height + width
+        var width = 800, height = 650;
+
+        //Number formatting
+        //
+        //Create a function that take a number, adds commas for thousands,
+        //and removes decimal values, e.g. 1234567.89 --> 1,234,567
+        //
+        var valueFormat = d3.format(","),
+         formatCurrency = function(d) { return "$" + valueFormat(d); }; 
+
+        // Define map projection
+        var projection = d3.geo.transverseMercator()
+            .rotate([91.83, -35.20])
+            .scale([8000]);
+
+        // Define path generator
+        var path = d3.geo.path()
+            .projection(projection);
+
+        // Create SVG Element
+        var svg = d3.select("#ARMap").append("svg")
+            .attr("id", "ARSvg")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Define scale to sort data values into color buckets
+        var color = d3.scale.threshold()
+            .domain([5000, 10000, 20000, 40000, 50000, 100000, 200000, 300000, 500000])
+            .range(["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]);
+
+        // Legend Stuff
+        var y = d3.scale.sqrt()
+            .domain([5000, 500000])
+            .range([0,425]);
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .tickValues(color.domain())
+            .orient("right");
+        
+        var totalDeaths =0 ,totalInuries = 0,totalCropsDamage = 0,totalPropertyDamage =0;
+        // Load CSV
+        d3.csv("data/ar_county_pop.csv", function(data) {
+             
+            //Load SEI Data
+            d3.csv("data/sei_ARSummary.csv", function(seiData) {
+
+                    var arYearlyStormData = seiData.filter(function(e) {
+                        return (e['YEAR'] == selYear && e['EVENT_TYPE'] == selEvent)
+                    });
+                
+                    console.log("Storm data length: " + arYearlyStormData.length);
+        
+            // Load TopoJSON
+            d3.json("data/ar-counties.json", function(error, ar) {
+                
+
+                for (var i = 0; i < data.length; i++) {
+
+                    var dataTown = data[i].county;
+                    var dataPop = parseFloat(data[i].population);
+
+                    console.log(dataTown);
+
+                    for (var j = 0; j < ar.objects.counties.geometries.length; j++) {
+                        var jsonTown = ar.objects.counties.geometries[j].properties.name;
+
+                        if (dataTown == jsonTown) {
+                             var ttt =    "Population: " + valueFormat(dataPop);
+                            
+                            ar.objects.counties.geometries[j].properties.population = dataPop;
+                             ar.objects.counties.geometries[j].properties.tooltip =    ttt;
+                            break;
+                        }
+                    }
+                }
+                
+                for (var i = 0; i < arYearlyStormData.length; i++) {
+
+                    var dataTown = arYearlyStormData[i].CZ_NAME.toUpperCase() + " COUNTY";
+                    var impact = parseFloat(arYearlyStormData[i].FatalWeight);
+                    var deaths = parseFloat(arYearlyStormData[i].DEATH_COUNT);
+                    var injuries = parseFloat(arYearlyStormData[i].INJURY_COUNT);
+                    var cropsDamage = parseFloat(arYearlyStormData[i].CROPS_DAMAGE);
+                    var propertyDamage = parseFloat(arYearlyStormData[i].PROPERTY_DAMAGE);
+                    var event = arYearlyStormData[i].EVENT_TYPE;
+                    
+                    totalCropsDamage = totalCropsDamage + cropsDamage;
+                    totalPropertyDamage = totalPropertyDamage + propertyDamage;
+                    totalDeaths = totalDeaths + deaths;
+                    totalInuries = totalInuries + injuries;
+                        
+                    for (var j = 0; j < ar.objects.counties.geometries.length; j++) {
+                        var jsonTown = ar.objects.counties.geometries[j].properties.name;
+
+                        if (dataTown == jsonTown.toUpperCase()) {
+                            
+                            
+                            var ttt =    "Population: " + valueFormat(ar.objects.counties.geometries[j].properties.population)
+                            + "<br/> <br/>" + event + " Impact: <br/>";
+                            
+                            if (deaths > 0) { ttt = ttt + " <em> Deaths : " + deaths + "</em> <br/>" }
+                            if (injuries > 0) { ttt = ttt + "<em> Injuries : " + injuries + "</em> <br/>" }
+                            if (cropsDamage > 0) { ttt = ttt + "<em> Crops Damage : " + formatCurrency(cropsDamage) + "</em> <br/>" }
+                             if (propertyDamage > 0) { ttt = ttt + "<em> Property Damage : " + formatCurrency(propertyDamage) + "</em> <br/>" }
+
+                            ar.objects.counties.geometries[j].properties.impact = impact;
+                            ar.objects.counties.geometries[j].properties.deaths = deaths;
+                            ar.objects.counties.geometries[j].properties.injuries = injuries;
+                            ar.objects.counties.geometries[j].properties.cropsDamage = cropsDamage;
+                            ar.objects.counties.geometries[j].properties.propertyDamage = propertyDamage;
+                            ar.objects.counties.geometries[j].properties.tooltip =    ttt;                        
+                            
+                            break;
+                        }
+                    }
+                }
+                
+                var arkansas = topojson.feature(ar, ar.objects.counties);
+
+                svg.append("path")
+                    .datum(arkansas)
+                    .attr("d", path)
+                    .style("stroke", "#777")
+                    .style("stroke-width", "1");
+
+
+                var g = svg.append("g")
+                    .attr("class", "key")
+                    .attr("transform", "translate(50, 140)")
+                    .call(yAxis);
+
+                g.selectAll("rect")
+                    .data(color.range().map(function(d, i) {
+                        return {
+                            y0: i ? y(color.domain()[i - 1]) : y.range()[0],
+                            y1: i < color.domain().length ? y(color.domain()[i]) : y.range()[1],
+                            z: d
+                        };
+                    }))
+                    .enter().append("rect")
+                        .attr("width", 8)
+                        .attr("y", function(d) { return d.y0; })
+                        .attr("height", function(d) { return d.y1 - d.y0; })
+                        .style("fill", function(d) { return d.z; });
+
+
+                svg.selectAll(".subunit")
+                    .data(topojson.feature(ar, ar.objects.counties).features)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .style("fill", function(d) {
+                        var population = d.properties.population;
+                        if (population) {
+                            return color(population);
+                        } else {
+                            return "#ddd";
+                        }
+                    })
+
+                    .on("mouseover", function(d) {
+                    //Position the tooltip <div> and set its content
+                            var xPosition = d3.event.pageX;
+                            var yPosition = d3.event.pageY - 40;
+
+                        //Populate name in tooltip
+                            d3.select("#tooltip .name")
+                                .text(d.properties.name);
+
+                            //Populate value in tooltip
+                            d3.select("#tooltip .value")
+                                .html(d.properties.tooltip);
+
+                            //Position tooltip and make visible
+                            d3.select("#tooltip")
+                                .style("left", xPosition + "px")
+                                .style("top", yPosition + "px")
+                                .style("opacity", 1)
+
+                        d3.select(this)
+                        .style("fill", "#509e2f");
+                    })
+                    .on("mouseout", function(d) {
+                        //d3.select("#tooltip").remove();
+
+                        //Hide the tooltip
+                        d3.select("#tooltip")
+                                .style("opacity", 0);
+
+                        d3.select(this)
+                        .transition()
+                        .duration(250)
+                        .style("fill", function(d) {
+                        var population = d.properties.population;
+
+                        if (population) {
+                            return color(population);
+                        } else {
+                            return "#ddd";
+                        }
+                    });
+                });
+                
+                svg.append("g")
+                    .attr("class", "bubble")
+                    .selectAll("circle")
+                        .data(topojson.feature(ar, ar.objects.counties).features
+                            .sort(function(a, b) { return b.properties.impact - a.properties.impact; }))
+                    .enter().append("circle")
+                        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+                        .attr("r", function(d) {if (d.properties.impact > 20) { return 20;} else return d.properties.impact; });
+                
+                svg.append("g")
+                    .attr("class", "bubblecrops")
+                    .selectAll("circle")
+                        .data(topojson.feature(ar, ar.objects.counties).features
+                            .sort(function(a, b) { return b.properties.cropsDamage - a.properties.cropsDamage; }))
+                    .enter().append("circle")
+                        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+                        .attr("r", function(d) { if (d.properties.cropsDamage > 0){  rad = radius(d.properties.cropsDamage); if (rad > 20) return 20; else return rad;} else return 0;});
+
+                 svg.append("g")
+                    .attr("class", "bubbleProperty")
+                    .selectAll("circle")
+                        .data(topojson.feature(ar, ar.objects.counties).features
+                            .sort(function(a, b) { return b.properties.propertyDamage - a.properties.propertyDamage; }))
+                    .enter().append("circle")
+                        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+                        .attr("r", function(d) {
+                           if (d.properties.propertyDamage > 0) {  rad = radius2(d.properties.propertyDamage); if (rad > 25) return 25; else return rad;
+                                                                }
+                            else return 0;});
+
+                updateTable(totalDeaths, totalInuries, formatCurrency(totalCropsDamage), formatCurrency(totalPropertyDamage));
+                
+            }); //topo json data
+        
+            }); //sei data
+    
+        }); //population data
+        
+       
+        
+    }
+        
+    function updateTable(totalDeaths, totalInjuries, totalCropsDamage, totalPropertyDamage)
+    {
+        document.getElementById("tbl-event-type").textContent = selEvent.toUpperCase();
+        document.getElementById("tbl-event-year").textContent = "Year : " + selYear;
+        document.getElementById("dcount").textContent = totalDeaths;
+        document.getElementById("icount").textContent = totalInjuries;
+        document.getElementById("cdamage").textContent = totalCropsDamage;
+        document.getElementById("pdamage").textContent = totalPropertyDamage;
+    }
+        
+    /************* UPDATE AR MAP****************************/
+    function updateARMap()
+    {
+        //d3.select("#ARSvg").remove();
+        
+        // Set window height + width
+        var width = 800, height = 650;
+
+        //Number formatting
+        //
+        //Create a function that take a number, adds commas for thousands,
+        //and removes decimal values, e.g. 1234567.89 --> 1,234,567
+        //
+        var valueFormat = d3.format(","),
+         formatCurrency = function(d) { return "$" + valueFormat(d); }; 
+
+        // Define map projection
+        var projection = d3.geo.transverseMercator()
+            .rotate([91.83, -35.20])
+            .scale([8000]);
+
+        // Define path generator
+        var path = d3.geo.path()
+            .projection(projection);
+
+        //just get the svg.
+        d3.select("#ARSvg").transition();
+        
+        // Define scale to sort data values into color buckets
+        var color = d3.scale.threshold()
+            .domain([5000, 10000, 20000, 40000, 50000, 100000, 200000, 300000, 500000])
+            .range(["#fff7ec","#fee8c8","#fdd49e","#fdbb84","#fc8d59","#ef6548","#d7301f","#b30000","#7f0000"]);
+
+        // Legend Stuff
+        var y = d3.scale.sqrt()
+            .domain([5000, 500000])
+            .range([0,425]);
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .tickValues(color.domain())
+            .orient("right");
+        
+        var totalDeaths =0 ,totalInuries = 0,totalCropsDamage = 0,totalPropertyDamage =0;
+        
+        // Load CSV
+        d3.csv("data/ar_county_pop.csv", function(data) {
+             
+            //Load SEI Data
+            d3.csv("data/sei_ARSummary.csv", function(seiData) {
+
+                    var arYearlyStormData = seiData.filter(function(e) {
+                        return (e['YEAR'] == selYear && e['EVENT_TYPE'] == selEvent)
+                    });
+                
+                    console.log("Storm data length: " + arYearlyStormData.length);
+        
+            // Load TopoJSON
+            d3.json("data/ar-counties.json", function(error, ar) {
+                
+
+                for (var i = 0; i < data.length; i++) {
+
+                    var dataTown = data[i].county;
+                    var dataPop = parseFloat(data[i].population);
+
+                    console.log(dataTown);
+
+                    for (var j = 0; j < ar.objects.counties.geometries.length; j++) {
+                        var jsonTown = ar.objects.counties.geometries[j].properties.name;
+
+                        if (dataTown == jsonTown) {
+                             var ttt =    "Population: " + valueFormat(dataPop);
+                            
+                            ar.objects.counties.geometries[j].properties.population = dataPop;
+                             ar.objects.counties.geometries[j].properties.tooltip =    ttt;
+                            break;
+                        }
+                    }
+                }
+                
+                for (var i = 0; i < arYearlyStormData.length; i++) {
+
+                    var dataTown = arYearlyStormData[i].CZ_NAME.toUpperCase() + " COUNTY";
+                    var impact = parseFloat(arYearlyStormData[i].FatalWeight);
+                    var deaths = parseFloat(arYearlyStormData[i].DEATH_COUNT);
+                    var injuries = parseFloat(arYearlyStormData[i].INJURY_COUNT);
+                    var cropsDamage = parseFloat(arYearlyStormData[i].CROPS_DAMAGE);
+                    var propertyDamage = parseFloat(arYearlyStormData[i].PROPERTY_DAMAGE);
+                    var event = arYearlyStormData[i].EVENT_TYPE;
+                        
+                    totalCropsDamage = totalCropsDamage + cropsDamage;
+                    totalPropertyDamage = totalPropertyDamage + propertyDamage;
+                    totalDeaths = totalDeaths + deaths;
+                    totalInuries = totalInuries + injuries;
+                    
+                    for (var j = 0; j < ar.objects.counties.geometries.length; j++) {
+                        var jsonTown = ar.objects.counties.geometries[j].properties.name;
+
+                        if (dataTown == jsonTown.toUpperCase()) {
+                            
+                            
+                            var ttt =    "Population: " + valueFormat(ar.objects.counties.geometries[j].properties.population)
+                            + "<br/> <br/>" + event + " Impact: <br/>";
+                            
+                            if (deaths > 0) { ttt = ttt + " <em> Deaths : " + deaths + "</em> <br/>" }
+                            if (injuries > 0) { ttt = ttt + "<em> Injuries : " + injuries + "</em> <br/>" }
+                            if (cropsDamage > 0) { ttt = ttt + "<em> Crops Damage : " + formatCurrency(cropsDamage) + "</em> <br/>" }
+                             if (propertyDamage > 0) { ttt = ttt + "<em> Property Damage : " + formatCurrency(propertyDamage) + "</em> <br/>" }
+
+                            ar.objects.counties.geometries[j].properties.impact = impact;
+                            ar.objects.counties.geometries[j].properties.deaths = deaths;
+                            ar.objects.counties.geometries[j].properties.injuries = injuries;
+                            ar.objects.counties.geometries[j].properties.cropsDamage = cropsDamage;
+                            ar.objects.counties.geometries[j].properties.propertyDamage = propertyDamage;
+                            ar.objects.counties.geometries[j].properties.tooltip =    ttt;                   
+                            break;
+                        }
+                    }
+                }
+                
+                var arkansas = topojson.feature(ar, ar.objects.counties);
+                
+                
+            
+                //remove bubbles and redraw
+                var svg = d3.select("#ARSvg");
+                svg.selectAll('.bubble').remove();
+                svg.selectAll('.bubblecrops').remove();
+                svg.selectAll('.bubbleProperty').remove();
+                svg.select(".subunit").remove();
+           
+                svg.selectAll("g").data(topojson.feature(ar, ar.objects.counties).features);
+                svg.selectAll(".subunit").data(topojson.feature(ar, ar.objects.counties).features);
+                
+                 svg.append("path")
+                    .datum(arkansas)
+                    .attr("d", path)
+                    .style("stroke", "#777")
+                    .style("stroke-width", "1");
+
+
+                svg.selectAll(".subunit")
+                    .data(topojson.feature(ar, ar.objects.counties).features)
+                    .enter().append("path")
+                    .attr("d", path)
+                    .style("fill", function(d) {
+                        var population = d.properties.population;
+                        if (population) {
+                            return color(population);
+                        } else {
+                            return "#ddd";
+                        }
+                    })/*;
+                    
+                    svg.selectAll(".subunit")
+                    .data(topojson.feature(ar, ar.objects.counties).features)*/
+                    .on("mouseover", function(d) {
+                    //Position the tooltip <div> and set its content
+                            var xPosition = d3.event.pageX;
+                            var yPosition = d3.event.pageY - 40;
+
+                        //Populate name in tooltip
+                            d3.select("#tooltip .name")
+                                .text(d.properties.name);
+
+                            //Populate value in tooltip
+                            d3.select("#tooltip .value")
+                                .html(d.properties.tooltip);
+
+                            //Position tooltip and make visible
+                            d3.select("#tooltip")
+                                .style("left", xPosition + "px")
+                                .style("top", yPosition + "px")
+                                .style("opacity", 1)
+
+                        d3.select(this)
+                        .style("fill", "#509e2f");
+                    })
+                    .on("mouseout", function(d) {
+                        //d3.select("#tooltip").remove();
+
+                        //Hide the tooltip
+                        d3.select("#tooltip")
+                                .style("opacity", 0);
+
+                        d3.select(this)
+                        .transition()
+                        .duration(250)
+                        .style("fill", function(d) {
+                        var population = d.properties.population;
+
+                        if (population) {
+                            return color(population);
+                        } else {
+                            return "#ddd";
+                        }
+                    });
+                });
+                
+                svg.append("g")
+                    .attr("class", "bubble")
+                    .selectAll("circle")
+                        .data(topojson.feature(ar, ar.objects.counties).features
+                            .sort(function(a, b) { return b.properties.impact - a.properties.impact; }))
+                    .enter().append("circle")
+                        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+                        .attr("r", function(d) {if (d.properties.impact > 20) { return 20;} else return d.properties.impact; });
+                
+                svg.append("g")
+                    .attr("class", "bubblecrops")
+                    .selectAll("circle")
+                        .data(topojson.feature(ar, ar.objects.counties).features
+                            .sort(function(a, b) { return b.properties.cropsDamage - a.properties.cropsDamage; }))
+                    .enter().append("circle")
+                        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+                        .attr("r", function(d) { if (d.properties.cropsDamage > 0){  rad = radius(d.properties.cropsDamage); if (rad > 20) return 20; else return rad;} else return 0;});
+
+                 svg.append("g")
+                    .attr("class", "bubbleProperty")
+                    .selectAll("circle")
+                        .data(topojson.feature(ar, ar.objects.counties).features
+                            .sort(function(a, b) { return b.properties.propertyDamage - a.properties.propertyDamage; }))
+                    .enter().append("circle")
+                        .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+                        .attr("r", function(d) {
+                           if (d.properties.propertyDamage > 0) {  rad = radius2(d.properties.propertyDamage); if (rad > 25) return 25; else return rad;
+                                                                }
+                            else return 0;});
+                
+                 updateTable(totalDeaths, totalInuries, formatCurrency(totalCropsDamage),formatCurrency(totalPropertyDamage));
+                
+            }); //topo json data
+        
+            }); //sei data
+    
+        }); //population data
+        
+    }
+
+        
+    drawUSEventsSummary(2015);
+    loadARMap();
+        
+	</script>
+    
+</body>
+</html>

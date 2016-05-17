@@ -1,0 +1,433 @@
+"YEAR","STATE","EVENT_TYPE","DEATH_COUNT"
+2014,"ALABAMA","Flash Flood",1
+2014,"ALABAMA","Flood",1
+2014,"ALABAMA","Heavy Rain",1
+2014,"ALABAMA","Rip Current",3
+2014,"ALABAMA","Thunderstorm Wind",1
+2014,"ALABAMA","Tornado",2
+2014,"ALABAMA","Winter Storm",8
+2014,"ALABAMA","Winter Weather",1
+2014,"ALASKA","Avalanche",1
+2014,"ALASKA","Winter Weather",1
+2014,"ARIZONA","Flash Flood",2
+2014,"ARIZONA","Heat",2
+2014,"ARIZONA","Heavy Rain",2
+2014,"ARIZONA","Lightning",2
+2014,"ARIZONA","Winter Weather",1
+2014,"ARKANSAS","Ice Storm",1
+2014,"ARKANSAS","Lightning",2
+2014,"ARKANSAS","Thunderstorm Wind",6
+2014,"ARKANSAS","Tornado",17
+2014,"ARKANSAS","Winter Storm",3
+2014,"ARKANSAS","Winter Weather",6
+2014,"ATLANTIC SOUTH","Marine Thunderstorm Wind",2
+2014,"CALIFORNIA","Dense Fog",3
+2014,"CALIFORNIA","Excessive Heat",1
+2014,"CALIFORNIA","Flash Flood",3
+2014,"CALIFORNIA","Heat",1
+2014,"CALIFORNIA","High Surf",3
+2014,"CALIFORNIA","High Wind",4
+2014,"CALIFORNIA","Lightning",1
+2014,"CALIFORNIA","Rip Current",3
+2014,"CALIFORNIA","Sneakerwave",5
+2014,"CALIFORNIA","Strong Wind",3
+2014,"CALIFORNIA","Wildfire",2
+2014,"CALIFORNIA","Winter Weather",1
+2014,"COLORADO","Avalanche",5
+2014,"COLORADO","Debris Flow",3
+2014,"COLORADO","Lightning",2
+2014,"COLORADO","Thunderstorm Wind",1
+2014,"COLORADO","Winter Weather",1
+2014,"CONNECTICUT","Thunderstorm Wind",1
+2014,"DELAWARE","Heat",1
+2014,"E PACIFIC","Marine Strong Wind",6
+2014,"FLORIDA","Flash Flood",3
+2014,"FLORIDA","Lightning",6
+2014,"FLORIDA","Rip Current",10
+2014,"FLORIDA","Strong Wind",1
+2014,"FLORIDA","Thunderstorm Wind",1
+2014,"GEORGIA","Ice Storm",1
+2014,"GEORGIA","Lightning",2
+2014,"GEORGIA","Winter Storm",4
+2014,"GUAM","Astronomical Low Tide",1
+2014,"GUAM","Heavy Rain",1
+2014,"GUAM","High Surf",3
+2014,"GUAM","Rip Current",4
+2014,"HAWAII","Strong Wind",1
+2014,"HAWAII WATERS","Marine High Wind",1
+2014,"IDAHO","Avalanche",1
+2014,"IDAHO","Freezing Fog",1
+2014,"IDAHO","Winter Storm",3
+2014,"IDAHO","Winter Weather",4
+2014,"ILLINOIS","Cold/Wind Chill",15
+2014,"ILLINOIS","Extreme Cold/Wind Chill",6
+2014,"ILLINOIS","Heat",1
+2014,"ILLINOIS","Heavy Snow",1
+2014,"ILLINOIS","Thunderstorm Wind",1
+2014,"ILLINOIS","Winter Storm",1
+2014,"ILLINOIS","Winter Weather",2
+2014,"INDIANA","Flood",3
+2014,"INDIANA","Thunderstorm Wind",2
+2014,"INDIANA","Winter Weather",1
+2014,"IOWA","Flash Flood",1
+2014,"IOWA","Thunderstorm Wind",3
+2014,"IOWA","Tornado",2
+2014,"KANSAS","Dust Storm",3
+2014,"KANSAS","Excessive Heat",1
+2014,"KANSAS","Heavy Snow",1
+2014,"KANSAS","Thunderstorm Wind",1
+2014,"KANSAS","Winter Weather",1
+2014,"KENTUCKY","Cold/Wind Chill",1
+2014,"KENTUCKY","Flash Flood",3
+2014,"KENTUCKY","Heavy Rain",1
+2014,"KENTUCKY","Winter Storm",1
+2014,"KENTUCKY","Winter Weather",5
+2014,"LAKE SUPERIOR","Marine Strong Wind",2
+2014,"LOUISIANA","Extreme Cold/Wind Chill",2
+2014,"LOUISIANA","Flash Flood",1
+2014,"LOUISIANA","Flood",1
+2014,"LOUISIANA","Ice Storm",2
+2014,"LOUISIANA","Thunderstorm Wind",2
+2014,"MAINE","Flood",1
+2014,"MAINE","Strong Wind",1
+2014,"MARYLAND","Rip Current",5
+2014,"MARYLAND","Thunderstorm Wind",1
+2014,"MASSACHUSETTS","Lightning",2
+2014,"MASSACHUSETTS","Strong Wind",2
+2014,"MICHIGAN","Lightning",1
+2014,"MICHIGAN","Winter Weather",4
+2014,"MINNESOTA","Blizzard",2
+2014,"MINNESOTA","Cold/Wind Chill",5
+2014,"MINNESOTA","Extreme Cold/Wind Chill",2
+2014,"MINNESOTA","Freezing Fog",1
+2014,"MINNESOTA","Winter Storm",1
+2014,"MISSISSIPPI","Flash Flood",1
+2014,"MISSISSIPPI","Lightning",1
+2014,"MISSISSIPPI","Strong Wind",1
+2014,"MISSISSIPPI","Thunderstorm Wind",1
+2014,"MISSISSIPPI","Tornado",17
+2014,"MISSISSIPPI","Winter Weather",2
+2014,"MISSOURI","Flood",1
+2014,"MISSOURI","Lightning",1
+2014,"MISSOURI","Winter Weather",1
+2014,"MONTANA","Avalanche",6
+2014,"MONTANA","Winter Storm",1
+2014,"MONTANA","Winter Weather",5
+2014,"NEBRASKA","Flash Flood",1
+2014,"NEBRASKA","Tornado",2
+2014,"NEBRASKA","Winter Storm",1
+2014,"NEVADA","Cold/Wind Chill",1
+2014,"NEVADA","Excessive Heat",3
+2014,"NEVADA","Heat",9
+2014,"NEVADA","High Wind",1
+2014,"NEW JERSEY","Dense Fog",1
+2014,"NEW JERSEY","High Wind",1
+2014,"NEW JERSEY","Rip Current",4
+2014,"NEW JERSEY","Winter Weather",3
+2014,"NEW MEXICO","Dense Fog",1
+2014,"NEW MEXICO","Flash Flood",2
+2014,"NEW MEXICO","Lightning",1
+2014,"NEW YORK","Dust Devil",1
+2014,"NEW YORK","Lake-Effect Snow",13
+2014,"NEW YORK","Rip Current",1
+2014,"NEW YORK","Thunderstorm Wind",2
+2014,"NEW YORK","Tornado",4
+2014,"NORTH CAROLINA","Rip Current",1
+2014,"NORTH CAROLINA","Strong Wind",1
+2014,"NORTH CAROLINA","Thunderstorm Wind",3
+2014,"NORTH CAROLINA","Tornado",2
+2014,"NORTH CAROLINA","Winter Storm",1
+2014,"NORTH CAROLINA","Winter Weather",2
+2014,"NORTH DAKOTA","Blizzard",1
+2014,"NORTH DAKOTA","Extreme Cold/Wind Chill",1
+2014,"OHIO","Winter Weather",5
+2014,"OKLAHOMA","Tornado",1
+2014,"OKLAHOMA","Wildfire",1
+2014,"OREGON","Avalanche",3
+2014,"OREGON","Excessive Heat",1
+2014,"OREGON","Flash Flood",1
+2014,"OREGON","Frost/Freeze",1
+2014,"OREGON","High Surf",3
+2014,"OREGON","High Wind",2
+2014,"OREGON","Rip Current",1
+2014,"PENNSYLVANIA","Cold/Wind Chill",4
+2014,"PENNSYLVANIA","Flash Flood",1
+2014,"PENNSYLVANIA","Heavy Snow",4
+2014,"PENNSYLVANIA","Lightning",1
+2014,"PENNSYLVANIA","Winter Storm",3
+2014,"PENNSYLVANIA","Winter Weather",3
+2014,"PUERTO RICO","Rip Current",7
+2014,"RHODE ISLAND","High Surf",1
+2014,"SOUTH CAROLINA","Flash Flood",2
+2014,"SOUTH CAROLINA","Heat",1
+2014,"SOUTH CAROLINA","Ice Storm",2
+2014,"SOUTH CAROLINA","Rip Current",2
+2014,"SOUTH CAROLINA","Winter Storm",2
+2014,"SOUTH DAKOTA","Blizzard",1
+2014,"SOUTH DAKOTA","Flash Flood",1
+2014,"SOUTH DAKOTA","Winter Weather",3
+2014,"TENNESSEE","Flash Flood",2
+2014,"TENNESSEE","Thunderstorm Wind",2
+2014,"TENNESSEE","Tornado",2
+2014,"TENNESSEE","Winter Weather",1
+2014,"TEXAS","Dense Fog",1
+2014,"TEXAS","Flash Flood",5
+2014,"TEXAS","Flood",2
+2014,"TEXAS","Hail",3
+2014,"TEXAS","Heavy Rain",1
+2014,"TEXAS","Lightning",1
+2014,"TEXAS","Rip Current",2
+2014,"TEXAS","Thunderstorm Wind",2
+2014,"TEXAS","Wildfire",1
+2014,"TEXAS","Winter Weather",11
+2014,"UTAH","Avalanche",3
+2014,"UTAH","Flash Flood",2
+2014,"UTAH","Winter Weather",1
+2014,"VIRGIN ISLANDS","Rip Current",2
+2014,"VIRGINIA","Flash Flood",1
+2014,"VIRGINIA","Heat",1
+2014,"VIRGINIA","Thunderstorm Wind",4
+2014,"VIRGINIA","Winter Storm",1
+2014,"VIRGINIA","Winter Weather",2
+2014,"WASHINGTON","Avalanche",3
+2014,"WASHINGTON","Debris Flow",43
+2014,"WASHINGTON","Excessive Heat",1
+2014,"WASHINGTON","Rip Current",2
+2014,"WASHINGTON","Strong Wind",2
+2014,"WASHINGTON","Winter Weather",4
+2014,"WEST VIRGINIA","Cold/Wind Chill",1
+2014,"WEST VIRGINIA","Heavy Rain",5
+2014,"WEST VIRGINIA","Wildfire",1
+2014,"WEST VIRGINIA","Winter Weather",1
+2014,"WISCONSIN","Cold/Wind Chill",9
+2014,"WISCONSIN","Extreme Cold/Wind Chill",1
+2014,"WISCONSIN","Heavy Rain",4
+2014,"WISCONSIN","High Wind",1
+2014,"WISCONSIN","Lightning",4
+2014,"WISCONSIN","Strong Wind",1
+2014,"WISCONSIN","Winter Weather",2
+2014,"WYOMING","Avalanche",1
+2015,"ALABAMA","Flash Flood",1
+2015,"ALABAMA","Flood",3
+2015,"ALABAMA","Lightning",4
+2015,"ALABAMA","Rip Current",2
+2015,"ALABAMA","Thunderstorm Wind",4
+2015,"ALASKA","Avalanche",1
+2015,"ALASKA","Cold/Wind Chill",2
+2015,"ALASKA","Debris Flow",3
+2015,"ALASKA","Flash Flood",3
+2015,"ALASKA","Heavy Rain",1
+2015,"ALASKA","Winter Weather",1
+2015,"AMERICAN SAMOA","Rip Current",1
+2015,"ARIZONA","Cold/Wind Chill",1
+2015,"ARIZONA","Dense Fog",2
+2015,"ARIZONA","Flash Flood",2
+2015,"ARIZONA","Heat",2
+2015,"ARIZONA","Lightning",3
+2015,"ARKANSAS","Excessive Heat",2
+2015,"ARKANSAS","Flash Flood",1
+2015,"ARKANSAS","Flood",2
+2015,"ARKANSAS","Lightning",1
+2015,"ARKANSAS","Strong Wind",1
+2015,"ARKANSAS","Thunderstorm Wind",1
+2015,"ARKANSAS","Tornado",2
+2015,"ATLANTIC NORTH","Marine Strong Wind",4
+2015,"ATLANTIC SOUTH","Marine Thunderstorm Wind",3
+2015,"CALIFORNIA","Avalanche",1
+2015,"CALIFORNIA","Dense Fog",10
+2015,"CALIFORNIA","Flash Flood",1
+2015,"CALIFORNIA","Heavy Snow",1
+2015,"CALIFORNIA","High Surf",1
+2015,"CALIFORNIA","Lightning",1
+2015,"CALIFORNIA","Sneakerwave",1
+2015,"CALIFORNIA","Wildfire",7
+2015,"COLORADO","Avalanche",2
+2015,"COLORADO","Lightning",1
+2015,"CONNECTICUT","Thunderstorm Wind",1
+2015,"CONNECTICUT","Winter Weather",1
+2015,"E PACIFIC","Marine Dense Fog",4
+2015,"E PACIFIC","Marine Strong Wind",2
+2015,"FLORIDA","Heavy Rain",1
+2015,"FLORIDA","High Surf",2
+2015,"FLORIDA","Lightning",5
+2015,"FLORIDA","Rip Current",15
+2015,"FLORIDA","Thunderstorm Wind",4
+2015,"GEORGIA","Excessive Heat",1
+2015,"GEORGIA","Ice Storm",1
+2015,"GEORGIA","Rip Current",3
+2015,"GEORGIA","Strong Wind",1
+2015,"GEORGIA","Thunderstorm Wind",1
+2015,"GUAM","High Surf",1
+2015,"GUAM","Hurricane",5
+2015,"GUAM","Rip Current",4
+2015,"GUAM","Tropical Storm",9
+2015,"GULF OF MEXICO","Marine Thunderstorm Wind",6
+2015,"HAWAII","Flash Flood",1
+2015,"HAWAII","High Surf",4
+2015,"HAWAII WATERS","Marine High Wind",1
+2015,"IDAHO","High Wind",1
+2015,"IDAHO","Thunderstorm Wind",4
+2015,"IDAHO","Wildfire",1
+2015,"IDAHO","Winter Storm",1
+2015,"IDAHO","Winter Weather",2
+2015,"ILLINOIS","Cold/Wind Chill",12
+2015,"ILLINOIS","Dense Fog",3
+2015,"ILLINOIS","Flash Flood",1
+2015,"ILLINOIS","Flood",8
+2015,"ILLINOIS","Heat",1
+2015,"ILLINOIS","Ice Storm",2
+2015,"ILLINOIS","Thunderstorm Wind",2
+2015,"ILLINOIS","Tornado",2
+2015,"INDIANA","Cold/Wind Chill",1
+2015,"INDIANA","Dense Fog",2
+2015,"INDIANA","Extreme Cold/Wind Chill",1
+2015,"INDIANA","Flash Flood",3
+2015,"INDIANA","Flood",3
+2015,"INDIANA","Strong Wind",1
+2015,"INDIANA","Thunderstorm Wind",1
+2015,"INDIANA","Winter Storm",1
+2015,"INDIANA","Winter Weather",2
+2015,"IOWA","Blizzard",1
+2015,"IOWA","Lightning",2
+2015,"IOWA","Winter Storm",2
+2015,"KANSAS","Flash Flood",1
+2015,"KANSAS","Heat",1
+2015,"KANSAS","Thunderstorm Wind",1
+2015,"KENTUCKY","Cold/Wind Chill",6
+2015,"KENTUCKY","Extreme Cold/Wind Chill",2
+2015,"KENTUCKY","Flash Flood",7
+2015,"KENTUCKY","Flood",3
+2015,"KENTUCKY","Heavy Snow",3
+2015,"KENTUCKY","Thunderstorm Wind",1
+2015,"KENTUCKY","Winter Storm",5
+2015,"KENTUCKY","Winter Weather",2
+2015,"LOUISIANA","Flash Flood",2
+2015,"LOUISIANA","Heavy Rain",1
+2015,"LOUISIANA","Thunderstorm Wind",1
+2015,"MARYLAND","Flash Flood",2
+2015,"MARYLAND","Flood",1
+2015,"MARYLAND","Heat",1
+2015,"MARYLAND","Strong Wind",1
+2015,"MARYLAND","Thunderstorm Wind",1
+2015,"MARYLAND","Winter Weather",2
+2015,"MASSACHUSETTS","Blizzard",1
+2015,"MASSACHUSETTS","Heavy Snow",2
+2015,"MICHIGAN","Heavy Rain",1
+2015,"MINNESOTA","Cold/Wind Chill",1
+2015,"MINNESOTA","Thunderstorm Wind",1
+2015,"MINNESOTA","Winter Weather",2
+2015,"MISSISSIPPI","Flash Flood",1
+2015,"MISSISSIPPI","Thunderstorm Wind",1
+2015,"MISSISSIPPI","Tornado",11
+2015,"MISSISSIPPI","Winter Weather",5
+2015,"MISSOURI","Flash Flood",5
+2015,"MISSOURI","Flood",3
+2015,"MISSOURI","Heat",1
+2015,"MISSOURI","Lightning",2
+2015,"MISSOURI","Thunderstorm Wind",1
+2015,"MISSOURI","Winter Weather",1
+2015,"MONTANA","Avalanche",1
+2015,"MONTANA","Dense Smoke",1
+2015,"MONTANA","Heavy Snow",1
+2015,"MONTANA","Wildfire",1
+2015,"MONTANA","Winter Storm",1
+2015,"NEBRASKA","Flood",1
+2015,"NEBRASKA","Thunderstorm Wind",1
+2015,"NEVADA","Excessive Heat",6
+2015,"NEVADA","Heat",29
+2015,"NEVADA","Winter Weather",1
+2015,"NEW HAMPSHIRE","Thunderstorm Wind",2
+2015,"NEW JERSEY","Cold/Wind Chill",3
+2015,"NEW JERSEY","Flash Flood",1
+2015,"NEW JERSEY","Heavy Snow",1
+2015,"NEW JERSEY","Rip Current",1
+2015,"NEW JERSEY","Strong Wind",1
+2015,"NEW JERSEY","Winter Weather",7
+2015,"NEW MEXICO","Flash Flood",4
+2015,"NEW MEXICO","Heavy Snow",1
+2015,"NEW MEXICO","Lightning",2
+2015,"NEW MEXICO","Strong Wind",3
+2015,"NEW YORK","Flash Flood",1
+2015,"NEW YORK","Rip Current",3
+2015,"NEW YORK","Winter Storm",1
+2015,"NORTH CAROLINA","Lightning",2
+2015,"NORTH CAROLINA","Rip Current",1
+2015,"NORTH CAROLINA","Thunderstorm Wind",1
+2015,"NORTH CAROLINA","Winter Weather",2
+2015,"OHIO","Flash Flood",3
+2015,"OHIO","Flood",2
+2015,"OHIO","Winter Weather",1
+2015,"OKLAHOMA","Flash Flood",8
+2015,"OKLAHOMA","Flood",8
+2015,"OKLAHOMA","Ice Storm",4
+2015,"OKLAHOMA","Tornado",2
+2015,"OREGON","Dust Storm",1
+2015,"OREGON","Excessive Heat",2
+2015,"OREGON","Flood",1
+2015,"OREGON","Heat",2
+2015,"OREGON","Heavy Rain",1
+2015,"OREGON","Rip Current",1
+2015,"OREGON","Strong Wind",1
+2015,"PENNSYLVANIA","Cold/Wind Chill",8
+2015,"PENNSYLVANIA","Excessive Heat",2
+2015,"PENNSYLVANIA","Heat",2
+2015,"PENNSYLVANIA","Strong Wind",1
+2015,"PENNSYLVANIA","Thunderstorm Wind",2
+2015,"PENNSYLVANIA","Wildfire",1
+2015,"PENNSYLVANIA","Winter Weather",7
+2015,"PUERTO RICO","High Surf",1
+2015,"PUERTO RICO","Rip Current",7
+2015,"SOUTH CAROLINA","Flash Flood",3
+2015,"SOUTH CAROLINA","Flood",1
+2015,"SOUTH CAROLINA","Rip Current",5
+2015,"SOUTH CAROLINA","Strong Wind",1
+2015,"SOUTH DAKOTA","Cold/Wind Chill",1
+2015,"SOUTH DAKOTA","Lightning",1
+2015,"SOUTH DAKOTA","Thunderstorm Wind",1
+2015,"TENNESSEE","Cold/Wind Chill",9
+2015,"TENNESSEE","Excessive Heat",2
+2015,"TENNESSEE","Flash Flood",6
+2015,"TENNESSEE","Tornado",2
+2015,"TENNESSEE","Winter Storm",3
+2015,"TENNESSEE","Winter Weather",1
+2015,"TEXAS","Blizzard",2
+2015,"TEXAS","Cold/Wind Chill",2
+2015,"TEXAS","Dust Storm",1
+2015,"TEXAS","Excessive Heat",2
+2015,"TEXAS","Flash Flood",46
+2015,"TEXAS","Flood",7
+2015,"TEXAS","Heat",6
+2015,"TEXAS","Heavy Rain",9
+2015,"TEXAS","Heavy Snow",1
+2015,"TEXAS","Ice Storm",4
+2015,"TEXAS","Lightning",1
+2015,"TEXAS","Rip Current",3
+2015,"TEXAS","Thunderstorm Wind",3
+2015,"TEXAS","Tornado",17
+2015,"TEXAS","Winter Storm",4
+2015,"TEXAS","Winter Weather",10
+2015,"UTAH","Avalanche",1
+2015,"UTAH","Flash Flood",20
+2015,"UTAH","High Wind",1
+2015,"UTAH","Lightning",1
+2015,"UTAH","Thunderstorm Wind",1
+2015,"UTAH","Winter Storm",1
+2015,"VERMONT","Winter Weather",5
+2015,"VIRGINIA","Flood",2
+2015,"VIRGINIA","Winter Storm",1
+2015,"WASHINGTON","Cold/Wind Chill",1
+2015,"WASHINGTON","Dust Storm",1
+2015,"WASHINGTON","Excessive Heat",1
+2015,"WASHINGTON","Heat",1
+2015,"WASHINGTON","High Wind",6
+2015,"WASHINGTON","Strong Wind",4
+2015,"WEST VIRGINIA","Debris Flow",1
+2015,"WEST VIRGINIA","Extreme Cold/Wind Chill",2
+2015,"WEST VIRGINIA","Flash Flood",1
+2015,"WEST VIRGINIA","Heavy Rain",1
+2015,"WEST VIRGINIA","Lightning",1
+2015,"WISCONSIN","Cold/Wind Chill",3
+2015,"WISCONSIN","Winter Storm",5
+2015,"WISCONSIN","Winter Weather",2
+2015,"WYOMING","Avalanche",2
+2015,"WYOMING","Dense Fog",2

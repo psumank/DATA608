@@ -1,0 +1,495 @@
+"YEAR","EVENT_TYPE","CZ_NAME","DEATH_COUNT","INJURY_COUNT","CROPS_DAMAGE","PROPERTY_DAMAGE","FatalWeight"
+2014,"Flash Flood","BOONE",0,0,0,75000,0
+2014,"Flash Flood","CALHOUN",0,0,0,1000,0
+2014,"Flash Flood","CHICOT",0,0,0,28000,0
+2014,"Flash Flood","CLAY",0,0,0,685000,0
+2014,"Flash Flood","CRAWFORD",0,2,0,100000,0.5
+2014,"Flash Flood","CRITTENDEN",0,0,0,500000,0
+2014,"Flash Flood","FULTON",0,0,0,100000,0
+2014,"Flash Flood","GARLAND",0,0,0,1000,0
+2014,"Flash Flood","HOT SPRING",0,0,0,85000,0
+2014,"Flash Flood","INDEPENDENCE",0,0,100000,1555000,0
+2014,"Flash Flood","IZARD",0,0,0,150000,0
+2014,"Flash Flood","JACKSON",0,0,50000,275000,0
+2014,"Flash Flood","JOHNSON",0,0,0,20000,0
+2014,"Flash Flood","LAWRENCE",0,0,0,1488000,0
+2014,"Flash Flood","LONOKE",0,0,50000,10000,0
+2014,"Flash Flood","MARION",0,0,0,60000,0
+2014,"Flash Flood","MONROE",0,0,250000,1305000,0
+2014,"Flash Flood","OUACHITA",0,0,0,50000,0
+2014,"Flash Flood","POLK",0,0,25000,835000,0
+2014,"Flash Flood","POPE",0,0,0,125000,0
+2014,"Flash Flood","PRAIRIE",0,0,100000,60000,0
+2014,"Flash Flood","PULASKI",0,0,0,1720000,0
+2014,"Flash Flood","RANDOLPH",0,0,0,1650000,0
+2014,"Flash Flood","SCOTT",0,0,0,5000,0
+2014,"Flash Flood","SEARCY",0,0,0,1000,0
+2014,"Flash Flood","SHARP",0,0,0,1500000,0
+2014,"Flash Flood","ST. FRANCIS",0,0,0,500000,0
+2014,"Flash Flood","WHITE",0,0,50000,50000,0
+2014,"Flash Flood","WOODRUFF",0,0,250000,1820000,0
+2014,"Flash Flood","YELL",0,0,0,1000,0
+2014,"Flood","FAULKNER",0,0,0,1000,0
+2014,"Flood","INDEPENDENCE",0,0,10000,5000,0
+2014,"Flood","JACKSON",0,0,1250000,20000,0
+2014,"Flood","MONROE",0,0,4775000,70000,0
+2014,"Flood","OUACHITA",0,0,0,6000,0
+2014,"Flood","PERRY",0,0,5000,5000,0
+2014,"Flood","PRAIRIE",0,0,2400000,20000,0
+2014,"Flood","SHARP",0,0,0,1000,0
+2014,"Flood","VAN BUREN",0,2,0,40000,0.5
+2014,"Flood","WHITE",0,0,250000,25000,0
+2014,"Flood","WOODRUFF",0,0,4825000,105000,0
+2014,"Flood","YELL",0,0,5000,7000,0
+2014,"Hail","ASHLEY",0,0,0,33300,0
+2014,"Hail","BAXTER",0,0,0,0,0
+2014,"Hail","BENTON",0,0,0,15000,0
+2014,"Hail","BOONE",0,0,0,0,0
+2014,"Hail","BRADLEY",0,0,0,0,0
+2014,"Hail","CLARK",0,0,0,0,0
+2014,"Hail","CLAY",0,0,0,0,0
+2014,"Hail","CLEBURNE",0,0,0,0,0
+2014,"Hail","CLEVELAND",0,0,0,0,0
+2014,"Hail","CONWAY",0,0,0,0,0
+2014,"Hail","CRAIGHEAD",0,0,0,0,0
+2014,"Hail","CRITTENDEN",0,0,0,0,0
+2014,"Hail","CROSS",0,0,0,0,0
+2014,"Hail","DALLAS",0,0,0,0,0
+2014,"Hail","DREW",0,0,0,0,0
+2014,"Hail","GARLAND",0,0,0,0,0
+2014,"Hail","GRANT",0,0,0,0,0
+2014,"Hail","GREENE",0,0,0,0,0
+2014,"Hail","HOT SPRING",0,0,0,0,0
+2014,"Hail","INDEPENDENCE",0,0,0,0,0
+2014,"Hail","JEFFERSON",0,0,0,0,0
+2014,"Hail","JOHNSON",0,0,0,0,0
+2014,"Hail","LAWRENCE",0,0,0,0,0
+2014,"Hail","LOGAN",0,0,0,0,0
+2014,"Hail","LONOKE",0,0,0,0,0
+2014,"Hail","MISSISSIPPI",0,0,0,0,0
+2014,"Hail","MONTGOMERY",0,0,0,0,0
+2014,"Hail","NEWTON",0,0,0,0,0
+2014,"Hail","OUACHITA",0,0,0,0,0
+2014,"Hail","PERRY",0,0,0,0,0
+2014,"Hail","PIKE",0,0,0,0,0
+2014,"Hail","POINSETT",0,0,0,0,0
+2014,"Hail","POLK",0,0,0,0,0
+2014,"Hail","POPE",0,0,0,0,0
+2014,"Hail","PULASKI",0,0,0,0,0
+2014,"Hail","RANDOLPH",0,0,0,0,0
+2014,"Hail","SALINE",0,0,0,0,0
+2014,"Hail","SCOTT",0,0,0,0,0
+2014,"Hail","SEARCY",0,0,0,0,0
+2014,"Hail","STONE",0,0,0,0,0
+2014,"Hail","VAN BUREN",0,0,0,0,0
+2014,"Hail","WHITE",0,0,0,0,0
+2014,"Heavy Rain","PULASKI",0,1,0,25000,0.25
+2014,"High Wind","BENTON",0,0,0,2000,0
+2014,"Ice Storm","CLEBURNE",0,0,0,200000,0
+2014,"Ice Storm","CONWAY",0,0,0,200000,0
+2014,"Ice Storm","FAULKNER",0,0,0,500000,0
+2014,"Ice Storm","GARLAND",0,0,0,700000,0
+2014,"Ice Storm","INDEPENDENCE",0,0,0,200000,0
+2014,"Ice Storm","IZARD",0,0,0,200000,0
+2014,"Ice Storm","JACKSON",0,0,0,300000,0
+2014,"Ice Storm","JEFFERSON",0,0,0,200000,0
+2014,"Ice Storm","LOGAN",0,0,0,200000,0
+2014,"Ice Storm","LONOKE",1,0,0,200000,0.75
+2014,"Ice Storm","MONTGOMERY",0,0,0,300000,0
+2014,"Ice Storm","PERRY",0,0,0,200000,0
+2014,"Ice Storm","PIKE",0,0,0,200000,0
+2014,"Ice Storm","POPE",0,0,0,500000,0
+2014,"Ice Storm","PRAIRIE",0,0,0,200000,0
+2014,"Ice Storm","PULASKI",0,0,0,700000,0
+2014,"Ice Storm","SALINE",0,0,0,300000,0
+2014,"Ice Storm","SHARP",0,0,0,200000,0
+2014,"Ice Storm","STONE",0,0,0,200000,0
+2014,"Ice Storm","VAN BUREN",0,0,0,200000,0
+2014,"Ice Storm","WHITE",0,0,0,500000,0
+2014,"Ice Storm","WOODRUFF",0,0,0,400000,0
+2014,"Ice Storm","YELL",0,0,0,300000,0
+2014,"Lightning","BENTON",0,3,0,0,0.75
+2014,"Lightning","DREW",0,0,0,25000,0
+2014,"Lightning","FAULKNER",0,6,0,0,1.5
+2014,"Lightning","GARLAND",0,0,0,10000,0
+2014,"Lightning","MISSISSIPPI",1,0,0,25000,0.75
+2014,"Lightning","POLK",0,0,0,130000,0
+2014,"Lightning","SEBASTIAN",0,1,0,0,0.25
+2014,"Lightning","WASHINGTON",0,0,0,30000,0
+2014,"Lightning","WOODRUFF",0,0,0,150000,0
+2014,"Lightning","YELL",1,0,0,0,0.75
+2014,"Strong Wind","SEVIER",0,0,0,1000,0
+2014,"Thunderstorm Wind","ARKANSAS",0,0,0,101000,0
+2014,"Thunderstorm Wind","ASHLEY",0,0,0,79000,0
+2014,"Thunderstorm Wind","BAXTER",0,0,0,215000,0
+2014,"Thunderstorm Wind","BENTON",0,1,0,33000,0.25
+2014,"Thunderstorm Wind","BRADLEY",0,0,0,556000,0
+2014,"Thunderstorm Wind","CALHOUN",0,0,0,105000,0
+2014,"Thunderstorm Wind","CHICOT",0,0,0,185000,0
+2014,"Thunderstorm Wind","CLARK",0,0,0,251000,0
+2014,"Thunderstorm Wind","CLAY",0,0,0,0,0
+2014,"Thunderstorm Wind","CLEBURNE",0,0,0,50000,0
+2014,"Thunderstorm Wind","CLEVELAND",0,0,0,17000,0
+2014,"Thunderstorm Wind","COLUMBIA",0,0,0,100000,0
+2014,"Thunderstorm Wind","CONWAY",0,0,0,139000,0
+2014,"Thunderstorm Wind","CRAIGHEAD",1,0,0,0,0.75
+2014,"Thunderstorm Wind","CRAWFORD",0,0,0,45000,0
+2014,"Thunderstorm Wind","CRITTENDEN",0,0,0,0,0
+2014,"Thunderstorm Wind","CROSS",0,0,0,0,0
+2014,"Thunderstorm Wind","DALLAS",2,1,0,260000,1.75
+2014,"Thunderstorm Wind","DESHA",0,0,0,50000,0
+2014,"Thunderstorm Wind","DREW",0,0,0,106000,0
+2014,"Thunderstorm Wind","FAULKNER",1,0,0,208000,0.75
+2014,"Thunderstorm Wind","FRANKLIN",0,0,0,87000,0
+2014,"Thunderstorm Wind","FULTON",0,0,0,20000,0
+2014,"Thunderstorm Wind","GARLAND",0,0,0,560000,0
+2014,"Thunderstorm Wind","GRANT",0,0,0,420000,0
+2014,"Thunderstorm Wind","GREENE",0,0,0,0,0
+2014,"Thunderstorm Wind","HEMPSTEAD",0,0,0,125000,0
+2014,"Thunderstorm Wind","HOT SPRING",1,1,0,172000,1
+2014,"Thunderstorm Wind","HOWARD",0,0,0,40000,0
+2014,"Thunderstorm Wind","INDEPENDENCE",0,0,0,110000,0
+2014,"Thunderstorm Wind","IZARD",0,0,0,7000,0
+2014,"Thunderstorm Wind","JACKSON",0,0,0,357000,0
+2014,"Thunderstorm Wind","JEFFERSON",0,1,0,114000,0.25
+2014,"Thunderstorm Wind","JOHNSON",0,0,0,232000,0
+2014,"Thunderstorm Wind","LAFAYETTE",0,0,0,125000,0
+2014,"Thunderstorm Wind","LAWRENCE",1,3,0,0,1.5
+2014,"Thunderstorm Wind","LEE",0,0,0,0,0
+2014,"Thunderstorm Wind","LINCOLN",0,0,0,20000,0
+2014,"Thunderstorm Wind","LOGAN",0,0,0,266000,0
+2014,"Thunderstorm Wind","LONOKE",0,0,0,76000,0
+2014,"Thunderstorm Wind","MARION",0,0,0,75000,0
+2014,"Thunderstorm Wind","MISSISSIPPI",0,1,0,150000,0.25
+2014,"Thunderstorm Wind","MONROE",0,0,0,116000,0
+2014,"Thunderstorm Wind","MONTGOMERY",0,0,0,142000,0
+2014,"Thunderstorm Wind","NEVADA",0,0,0,50000,0
+2014,"Thunderstorm Wind","NEWTON",0,0,0,43000,0
+2014,"Thunderstorm Wind","OUACHITA",0,0,0,2677000,0
+2014,"Thunderstorm Wind","PERRY",0,0,0,182000,0
+2014,"Thunderstorm Wind","PIKE",0,0,0,238000,0
+2014,"Thunderstorm Wind","POINSETT",0,0,0,1000,0
+2014,"Thunderstorm Wind","POLK",0,0,0,321000,0
+2014,"Thunderstorm Wind","POPE",0,0,0,197000,0
+2014,"Thunderstorm Wind","PRAIRIE",0,0,0,25000,0
+2014,"Thunderstorm Wind","PULASKI",0,2,0,825000,0.5
+2014,"Thunderstorm Wind","RANDOLPH",0,0,0,0,0
+2014,"Thunderstorm Wind","SALINE",0,0,0,364000,0
+2014,"Thunderstorm Wind","SCOTT",0,0,0,7000,0
+2014,"Thunderstorm Wind","SEARCY",0,0,0,12000,0
+2014,"Thunderstorm Wind","SEBASTIAN",0,0,0,271000,0
+2014,"Thunderstorm Wind","SEVIER",0,0,0,5000,0
+2014,"Thunderstorm Wind","ST. FRANCIS",0,0,0,50000,0
+2014,"Thunderstorm Wind","STONE",0,0,0,25100,0
+2014,"Thunderstorm Wind","UNION",0,0,0,5000,0
+2014,"Thunderstorm Wind","VAN BUREN",0,0,0,26000,0
+2014,"Thunderstorm Wind","WHITE",0,0,0,540000,0
+2014,"Thunderstorm Wind","WOODRUFF",0,0,0,65000,0
+2014,"Thunderstorm Wind","YELL",0,0,0,540000,0
+2014,"Tornado","CLARK",0,0,0,150000,0
+2014,"Tornado","CLAY",0,0,0,70000,0
+2014,"Tornado","FAULKNER",12,167,0,210000000,50.75
+2014,"Tornado","FRANKLIN",0,0,0,200000,0
+2014,"Tornado","INDEPENDENCE",0,2,0,270000,0.5
+2014,"Tornado","JACKSON",0,0,0,110000,0
+2014,"Tornado","LITTLE RIVER",1,4,0,210000,1.75
+2014,"Tornado","LONOKE",0,0,0,175000,0
+2014,"Tornado","MADISON",0,0,0,150000,0
+2014,"Tornado","NEWTON",0,0,0,25000,0
+2014,"Tornado","POINSETT",0,0,0,0,0
+2014,"Tornado","POLK",0,0,0,50000,0
+2014,"Tornado","POPE",0,0,0,250000,0
+2014,"Tornado","PRAIRIE",0,0,0,20000,0
+2014,"Tornado","PULASKI",3,25,0,13040000,8.5
+2014,"Tornado","SEARCY",0,0,0,10000,0
+2014,"Tornado","WHITE",1,2,0,1990000,1.25
+2014,"Wildfire","CRAWFORD",0,0,0,25000,0
+2014,"Wildfire","PULASKI",0,0,0,0,0
+2014,"Wildfire","WASHINGTON",0,0,0,50000,0
+2014,"Winter Storm","ARKANSAS",0,0,0,100000,0
+2014,"Winter Storm","BAXTER",0,0,0,50000,0
+2014,"Winter Storm","BOONE",0,0,0,50000,0
+2014,"Winter Storm","CLAY",0,0,0,0,0
+2014,"Winter Storm","CLEBURNE",1,2,0,50000,1.25
+2014,"Winter Storm","CONWAY",0,0,0,50000,0
+2014,"Winter Storm","CRAIGHEAD",0,0,0,0,0
+2014,"Winter Storm","CRITTENDEN",0,3,0,0,0.75
+2014,"Winter Storm","CROSS",0,0,0,0,0
+2014,"Winter Storm","FAULKNER",0,0,0,100000,0
+2014,"Winter Storm","FULTON",0,0,0,100000,0
+2014,"Winter Storm","GARLAND",0,0,0,25000,0
+2014,"Winter Storm","GRANT",0,0,0,25000,0
+2014,"Winter Storm","GREENE",0,0,0,0,0
+2014,"Winter Storm","HOT SPRING",0,0,0,25000,0
+2014,"Winter Storm","INDEPENDENCE",0,0,0,0,0
+2014,"Winter Storm","IZARD",0,0,0,0,0
+2014,"Winter Storm","JEFFERSON",0,0,0,50000,0
+2014,"Winter Storm","JOHNSON",0,0,0,50000,0
+2014,"Winter Storm","LAWRENCE",0,0,0,0,0
+2014,"Winter Storm","LEE",0,0,0,0,0
+2014,"Winter Storm","LOGAN",0,0,0,25000,0
+2014,"Winter Storm","LONOKE",0,0,0,50000,0
+2014,"Winter Storm","MARION",1,0,0,50000,0.75
+2014,"Winter Storm","MISSISSIPPI",0,0,0,0,0
+2014,"Winter Storm","MONTGOMERY",0,0,0,25000,0
+2014,"Winter Storm","NEWTON",0,0,0,50000,0
+2014,"Winter Storm","PERRY",0,0,0,50000,0
+2014,"Winter Storm","PHILLIPS",0,0,0,0,0
+2014,"Winter Storm","POINSETT",1,1,0,0,1
+2014,"Winter Storm","POLK",0,0,0,25000,0
+2014,"Winter Storm","POPE",0,0,0,50000,0
+2014,"Winter Storm","PRAIRIE",0,0,0,50000,0
+2014,"Winter Storm","PULASKI",0,0,0,100000,0
+2014,"Winter Storm","RANDOLPH",0,0,0,0,0
+2014,"Winter Storm","SALINE",0,0,0,50000,0
+2014,"Winter Storm","SCOTT",0,0,0,25000,0
+2014,"Winter Storm","SEARCY",0,0,0,50000,0
+2014,"Winter Storm","SHARP",0,0,0,200000,0
+2014,"Winter Storm","ST. FRANCIS",0,0,0,0,0
+2014,"Winter Storm","STONE",0,0,0,50000,0
+2014,"Winter Storm","VAN BUREN",0,0,0,50000,0
+2014,"Winter Storm","WHITE",0,0,0,200000,0
+2014,"Winter Storm","WOODRUFF",0,0,0,500000,0
+2014,"Winter Storm","YELL",0,0,0,50000,0
+2014,"Winter Weather","ARKANSAS",0,0,0,100000,0
+2014,"Winter Weather","BAXTER",0,0,0,50000,0
+2014,"Winter Weather","BOONE",0,0,0,50000,0
+2014,"Winter Weather","CLARK",0,0,0,100000,0
+2014,"Winter Weather","CLAY",0,0,0,0,0
+2014,"Winter Weather","CLEBURNE",0,0,0,0,0
+2014,"Winter Weather","CLEVELAND",0,0,0,50000,0
+2014,"Winter Weather","CONWAY",1,0,0,0,0.75
+2014,"Winter Weather","CRAIGHEAD",0,0,0,0,0
+2014,"Winter Weather","CRITTENDEN",0,0,0,0,0
+2014,"Winter Weather","CROSS",0,0,0,0,0
+2014,"Winter Weather","DALLAS",0,0,0,50000,0
+2014,"Winter Weather","FAULKNER",0,0,0,0,0
+2014,"Winter Weather","FULTON",0,0,0,50000,0
+2014,"Winter Weather","GARLAND",0,0,0,0,0
+2014,"Winter Weather","GRANT",1,4,0,100000,1.75
+2014,"Winter Weather","GREENE",0,0,0,0,0
+2014,"Winter Weather","HOT SPRING",0,0,0,100000,0
+2014,"Winter Weather","HOWARD",0,0,0,100000,0
+2014,"Winter Weather","INDEPENDENCE",0,0,0,0,0
+2014,"Winter Weather","IZARD",0,0,0,0,0
+2014,"Winter Weather","JACKSON",0,0,0,0,0
+2014,"Winter Weather","JEFFERSON",0,0,0,0,0
+2014,"Winter Weather","JOHNSON",0,0,0,50000,0
+2014,"Winter Weather","LAWRENCE",0,0,0,0,0
+2014,"Winter Weather","LEE",0,0,0,0,0
+2014,"Winter Weather","LINCOLN",0,0,0,50000,0
+2014,"Winter Weather","LOGAN",0,0,0,0,0
+2014,"Winter Weather","LONOKE",0,0,0,0,0
+2014,"Winter Weather","MARION",1,1,0,50000,1
+2014,"Winter Weather","MISSISSIPPI",0,0,0,0,0
+2014,"Winter Weather","MONROE",0,0,0,200000,0
+2014,"Winter Weather","MONTGOMERY",0,0,0,0,0
+2014,"Winter Weather","NEWTON",0,1,0,50000,0.25
+2014,"Winter Weather","PERRY",0,0,0,0,0
+2014,"Winter Weather","PIKE",0,0,0,0,0
+2014,"Winter Weather","POINSETT",0,0,0,0,0
+2014,"Winter Weather","POLK",0,0,0,50000,0
+2014,"Winter Weather","POPE",0,0,0,0,0
+2014,"Winter Weather","PRAIRIE",0,0,0,0,0
+2014,"Winter Weather","PULASKI",1,0,0,0,0.75
+2014,"Winter Weather","RANDOLPH",0,0,0,0,0
+2014,"Winter Weather","SALINE",0,0,0,0,0
+2014,"Winter Weather","SCOTT",1,0,0,50000,0.75
+2014,"Winter Weather","SEARCY",0,0,0,50000,0
+2014,"Winter Weather","SEVIER",0,0,0,50000,0
+2014,"Winter Weather","SHARP",0,0,0,0,0
+2014,"Winter Weather","ST. FRANCIS",0,0,0,0,0
+2014,"Winter Weather","STONE",0,0,0,0,0
+2014,"Winter Weather","VAN BUREN",0,0,0,0,0
+2014,"Winter Weather","WHITE",1,2,0,0,1.25
+2014,"Winter Weather","WOODRUFF",0,0,0,0,0
+2014,"Winter Weather","YELL",0,0,0,0,0
+2015,"Excessive Heat","Garland",1,0,0,0,0.75
+2015,"Excessive Heat","Lonoke",1,0,0,0,0.75
+2015,"Flash Flood","ASHLEY",0,0,0,28000,0
+2015,"Flash Flood","CARROLL",1,0,0,0,0.75
+2015,"Flash Flood","CHICOT",0,0,0,99000,0
+2015,"Flash Flood","CLARK",0,0,0,10000,0
+2015,"Flash Flood","CLAY",0,0,0,50000,0
+2015,"Flash Flood","CRAIGHEAD",0,0,0,5000,0
+2015,"Flash Flood","CRAWFORD",0,0,0,25000,0
+2015,"Flash Flood","FAULKNER",0,0,0,5000,0
+2015,"Flash Flood","FRANKLIN",0,0,0,150000,0
+2015,"Flash Flood","JOHNSON",0,0,0,100000,0
+2015,"Flash Flood","LITTLE RIVER",0,0,0,20000,0
+2015,"Flash Flood","MARION",0,0,0,15000,0
+2015,"Flash Flood","MONTGOMERY",0,0,0,100000,0
+2015,"Flash Flood","NEWTON",0,0,0,60000,0
+2015,"Flash Flood","POLK",0,0,0,100000,0
+2015,"Flash Flood","PULASKI",0,0,0,50000,0
+2015,"Flash Flood","SCOTT",0,0,0,5000,0
+2015,"Flash Flood","SEBASTIAN",0,0,0,250000,0
+2015,"Flash Flood","SEVIER",0,0,0,5000,0
+2015,"Flash Flood","SHARP",0,0,0,100000,0
+2015,"Flash Flood","WASHINGTON",0,0,0,115000,0
+2015,"Flash Flood","YELL",0,2,0,10000,0.5
+2015,"Flood","CHICOT",0,0,0,30000,0
+2015,"Flood","CRAWFORD",1,0,0,0,0.75
+2015,"Flood","FRANKLIN",0,0,0,100000,0
+2015,"Flood","HEMPSTEAD",0,0,0,770000,0
+2015,"Flood","JEFFERSON",0,0,0,5000000,0
+2015,"Flood","LAFAYETTE",0,0,13000000,500000,0
+2015,"Flood","LITTLE RIVER",1,0,13000000,1000000,0.75
+2015,"Flood","MILLER",0,0,840000,191000,0
+2015,"Hail","ARKANSAS",0,0,0,5000,0
+2015,"Hail","BENTON",0,0,0,185000,0
+2015,"Hail","CARROLL",0,0,0,20000,0
+2015,"Hail","CHICOT",0,0,0,1000,0
+2015,"Hail","CLAY",0,0,0,0,0
+2015,"Hail","CRAIGHEAD",0,0,0,0,0
+2015,"Hail","CROSS",0,0,0,0,0
+2015,"Hail","GREENE",0,0,0,0,0
+2015,"Hail","LAWRENCE",0,0,0,0,0
+2015,"Hail","MISSISSIPPI",0,0,0,0,0
+2015,"Hail","PHILLIPS",0,0,0,0,0
+2015,"Hail","POINSETT",0,0,0,0,0
+2015,"Hail","SEBASTIAN",0,0,0,45000,0
+2015,"Hail","WASHINGTON",0,0,0,80000,0
+2015,"Heat","Washington",0,325,0,0,81.25
+2015,"Ice Storm","ARKANSAS",0,0,0,75000,0
+2015,"Ice Storm","CLARK",0,0,0,75000,0
+2015,"Ice Storm","CLEVELAND",0,0,0,75000,0
+2015,"Ice Storm","DALLAS",0,0,0,75000,0
+2015,"Ice Storm","GARLAND",0,0,0,100000,0
+2015,"Ice Storm","GRANT",0,0,0,75000,0
+2015,"Ice Storm","HOT SPRING",0,0,0,100000,0
+2015,"Ice Storm","JEFFERSON",0,0,0,100000,0
+2015,"Ice Storm","LINCOLN",0,0,0,75000,0
+2015,"Ice Storm","MONTGOMERY",0,0,0,150000,0
+2015,"Ice Storm","PIKE",0,0,0,100000,0
+2015,"Ice Storm","YELL",0,0,0,50000,0
+2015,"Lightning","BENTON",1,0,0,0,0.75
+2015,"Lightning","UNION",0,0,0,40000,0
+2015,"Strong Wind","FAULKNER",1,0,0,0,0.75
+2015,"Thunderstorm Wind","ARKANSAS",0,0,0,20000,0
+2015,"Thunderstorm Wind","ASHLEY",0,0,0,21000,0
+2015,"Thunderstorm Wind","BENTON",0,0,0,23000,0
+2015,"Thunderstorm Wind","BOONE",0,0,0,2000,0
+2015,"Thunderstorm Wind","CARROLL",0,0,0,40000,0
+2015,"Thunderstorm Wind","CHICOT",0,0,0,191000,0
+2015,"Thunderstorm Wind","CLEBURNE",0,0,0,5000,0
+2015,"Thunderstorm Wind","CRAIGHEAD",0,0,0,27000,0
+2015,"Thunderstorm Wind","CRAWFORD",0,0,0,25000,0
+2015,"Thunderstorm Wind","DESHA",0,0,0,5000,0
+2015,"Thunderstorm Wind","DREW",0,0,0,20000,0
+2015,"Thunderstorm Wind","FAULKNER",0,0,0,1000,0
+2015,"Thunderstorm Wind","FRANKLIN",0,0,0,7000,0
+2015,"Thunderstorm Wind","FULTON",0,0,0,72000,0
+2015,"Thunderstorm Wind","GARLAND",0,0,0,5000,0
+2015,"Thunderstorm Wind","GRANT",0,0,0,30000,0
+2015,"Thunderstorm Wind","GREENE",0,0,0,0,0
+2015,"Thunderstorm Wind","HEMPSTEAD",0,0,0,225000,0
+2015,"Thunderstorm Wind","HOT SPRING",0,0,0,10000,0
+2015,"Thunderstorm Wind","INDEPENDENCE",0,0,0,5000,0
+2015,"Thunderstorm Wind","IZARD",0,0,0,5000,0
+2015,"Thunderstorm Wind","JEFFERSON",0,0,0,2000,0
+2015,"Thunderstorm Wind","LAFAYETTE",0,2,0,0,0.5
+2015,"Thunderstorm Wind","LAWRENCE",0,0,0,0,0
+2015,"Thunderstorm Wind","LITTLE RIVER",0,0,0,30000,0
+2015,"Thunderstorm Wind","LONOKE",0,0,0,1000,0
+2015,"Thunderstorm Wind","MARION",0,0,0,50000,0
+2015,"Thunderstorm Wind","MISSISSIPPI",0,0,0,30000,0
+2015,"Thunderstorm Wind","MONROE",0,0,0,5000,0
+2015,"Thunderstorm Wind","MONTGOMERY",0,0,0,50000,0
+2015,"Thunderstorm Wind","PERRY",0,0,0,15000,0
+2015,"Thunderstorm Wind","PHILLIPS",0,0,0,0,0
+2015,"Thunderstorm Wind","PIKE",0,0,0,30000,0
+2015,"Thunderstorm Wind","POINSETT",0,0,0,0,0
+2015,"Thunderstorm Wind","POLK",0,0,0,100000,0
+2015,"Thunderstorm Wind","POPE",1,0,0,100000,0.75
+2015,"Thunderstorm Wind","PULASKI",0,0,0,10000,0
+2015,"Thunderstorm Wind","RANDOLPH",0,0,0,10000,0
+2015,"Thunderstorm Wind","SALINE",0,2,0,55000,0.5
+2015,"Thunderstorm Wind","SCOTT",0,0,0,110000,0
+2015,"Thunderstorm Wind","SEBASTIAN",0,0,0,14000,0
+2015,"Thunderstorm Wind","SEVIER",0,0,0,200000,0
+2015,"Thunderstorm Wind","SHARP",0,0,0,500000,0
+2015,"Thunderstorm Wind","STONE",0,0,0,100000,0
+2015,"Thunderstorm Wind","UNION",0,0,0,122000,0
+2015,"Thunderstorm Wind","VAN BUREN",0,0,0,121000,0
+2015,"Thunderstorm Wind","WASHINGTON",0,0,0,35000,0
+2015,"Thunderstorm Wind","WHITE",0,0,0,25000,0
+2015,"Thunderstorm Wind","WOODRUFF",0,0,0,5000,0
+2015,"Tornado","BENTON",0,0,0,185000,0
+2015,"Tornado","BOONE",0,0,0,500000,0
+2015,"Tornado","BRADLEY",0,0,0,75000,0
+2015,"Tornado","CALHOUN",0,0,5000,150000,0
+2015,"Tornado","CONWAY",0,0,0,50000,0
+2015,"Tornado","DREW",0,0,10000,50000,0
+2015,"Tornado","HEMPSTEAD",0,0,0,15000,0
+2015,"Tornado","HOWARD",2,8,0,1500000,3.5
+2015,"Tornado","LEE",0,0,0,150000,0
+2015,"Tornado","MADISON",0,0,0,275000,0
+2015,"Tornado","NEVADA",0,0,0,100000,0
+2015,"Tornado","OUACHITA",0,0,0,50000,0
+2015,"Tornado","VAN BUREN",0,0,0,80000,0
+2015,"Tornado","YELL",0,0,0,305000,0
+2015,"Winter Storm","ARKANSAS",0,0,0,10000,0
+2015,"Winter Storm","BAXTER",0,0,0,40000,0
+2015,"Winter Storm","CLARK",0,0,0,20000,0
+2015,"Winter Storm","CLAY",0,0,0,0,0
+2015,"Winter Storm","CLEBURNE",0,0,0,20000,0
+2015,"Winter Storm","CLEVELAND",0,0,0,10000,0
+2015,"Winter Storm","CONWAY",0,0,0,20000,0
+2015,"Winter Storm","CRAIGHEAD",0,0,0,0,0
+2015,"Winter Storm","CRITTENDEN",0,0,0,0,0
+2015,"Winter Storm","CROSS",0,0,0,0,0
+2015,"Winter Storm","DALLAS",0,0,0,10000,0
+2015,"Winter Storm","FAULKNER",0,0,0,30000,0
+2015,"Winter Storm","FULTON",0,0,0,30000,0
+2015,"Winter Storm","GARLAND",0,0,0,30000,0
+2015,"Winter Storm","GRANT",0,0,0,30000,0
+2015,"Winter Storm","GREENE",0,0,0,0,0
+2015,"Winter Storm","HOT SPRING",0,0,0,20000,0
+2015,"Winter Storm","INDEPENDENCE",0,0,0,20000,0
+2015,"Winter Storm","IZARD",0,0,0,30000,0
+2015,"Winter Storm","JACKSON",0,0,0,20000,0
+2015,"Winter Storm","JEFFERSON",0,0,0,20000,0
+2015,"Winter Storm","LAWRENCE",0,0,0,0,0
+2015,"Winter Storm","LEE",0,0,0,0,0
+2015,"Winter Storm","LONOKE",0,0,0,120000,0
+2015,"Winter Storm","MARION",0,0,0,50000,0
+2015,"Winter Storm","MISSISSIPPI",0,0,0,0,0
+2015,"Winter Storm","MONROE",0,0,0,80000,0
+2015,"Winter Storm","NEWTON",0,0,0,30000,0
+2015,"Winter Storm","OUACHITA",0,0,0,10000,0
+2015,"Winter Storm","PERRY",0,0,0,20000,0
+2015,"Winter Storm","PHILLIPS",0,0,0,0,0
+2015,"Winter Storm","POINSETT",0,0,0,0,0
+2015,"Winter Storm","PRAIRIE",0,0,0,100000,0
+2015,"Winter Storm","PULASKI",0,0,0,160000,0
+2015,"Winter Storm","RANDOLPH",0,0,0,0,0
+2015,"Winter Storm","SALINE",0,0,0,110000,0
+2015,"Winter Storm","SEARCY",0,0,0,30000,0
+2015,"Winter Storm","SHARP",0,0,0,30000,0
+2015,"Winter Storm","ST. FRANCIS",0,0,0,0,0
+2015,"Winter Storm","STONE",0,0,0,30000,0
+2015,"Winter Storm","VAN BUREN",0,0,0,20000,0
+2015,"Winter Storm","WHITE",0,0,0,30000,0
+2015,"Winter Storm","WOODRUFF",0,0,0,30000,0
+2015,"Winter Weather","BAXTER",0,0,0,60000,0
+2015,"Winter Weather","BOONE",0,0,0,40000,0
+2015,"Winter Weather","CLEBURNE",0,0,0,20000,0
+2015,"Winter Weather","FAULKNER",0,0,0,40000,0
+2015,"Winter Weather","FULTON",0,0,0,70000,0
+2015,"Winter Weather","INDEPENDENCE",0,0,0,50000,0
+2015,"Winter Weather","JACKSON",0,0,0,60000,0
+2015,"Winter Weather","LEE",0,0,0,0,0
+2015,"Winter Weather","LONOKE",0,0,0,50000,0
+2015,"Winter Weather","MARION",0,0,0,50000,0
+2015,"Winter Weather","NEWTON",0,0,0,20000,0
+2015,"Winter Weather","PERRY",0,0,0,20000,0
+2015,"Winter Weather","PHILLIPS",0,0,0,0,0
+2015,"Winter Weather","PULASKI",0,0,0,50000,0
+2015,"Winter Weather","RANDOLPH",0,0,0,0,0
+2015,"Winter Weather","SEARCY",0,0,0,20000,0
+2015,"Winter Weather","SHARP",0,0,0,60000,0
+2015,"Winter Weather","STONE",0,0,0,50000,0
+2015,"Winter Weather","VAN BUREN",0,0,0,20000,0
+2015,"Winter Weather","WHITE",0,0,0,80000,0
+2015,"Winter Weather","WOODRUFF",0,0,0,20000,0
