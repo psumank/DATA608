@@ -6,7 +6,7 @@ This project is completed as part of CUNY DATA 608's curriculum. The intent of t
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2016 Suman K Polavarapu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
