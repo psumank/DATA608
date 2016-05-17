@@ -1,12 +1,27 @@
 ## DATA608 - Course Project
 
-This project is completed as part of CUNY DATA 608's curriculum. The intent of the project is to visualize the state level summary of fatalities caused by various weather events in USA. And also, provide the county level impacts in the State of Arkansas.
+This project is completed as part of CUNY DATA 608's curriculum. The intent of the project is to visualize the state level summary of fatalities caused by various weather events in USA. And also, provide the county level impacts (both fatalities as well as the financial damages to crops and properties) in the State of Arkansas, in the years - 2015 and 2014.
+
+### Data Acquisition
+
+Data is acquired from NOAA - [National Centers For Environmental Information]
+(http://www.ncdc.noaa.gov/stormevents/)
+
+Census data for Arkansas is acquired from [United States Census Bureau](http://www.census.gov/data.html)
+
+[Please refer here for rough idea on data acquisition](http://rpubs.com/pskumar/DATA608)
+
+
+### Tools
+
+Data Acuquisition - R
+Data Visualization - [D3.JS](https://d3js.org/) and [Google Charts - GeoMap] https://developers.google.com/chart/interactive/docs/gallery/geomap).
 
 ## License
 
 MIT License
 
-Copyright (c) 2016 Suman K Polavarapu
+Copyright (c) [2016] [Suman K Polavarapu]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
