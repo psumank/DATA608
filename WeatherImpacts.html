@@ -308,7 +308,7 @@
 		<p>Storm Data is an official publication of the National Oceanic and Atmospheric Administration (NOAA) which documents the occurrence of storms and other significant weather phenomena having sufficient intensity to cause loss of life, injuries, significant property damage, and/or disruption to commerce. A storm includes various weather conditions such as - Flood, Ice Storm, Tornado, Heavy rain etc</p>
         
         <p>The intent of the project is to visualize the state level summary of fatalities caused by various weather events in USA. And also, provide the county level impacts in the <strong>State of Arkansas.</strong></p>
-
+        
         <hr width="1200", align="left">
         
         <br/>
@@ -395,12 +395,17 @@
             
         </div>
         
+        <hr width="1200", align="left" style="border-top: dashed 2px;color:yellow" />
         
 		<div id="footer">
-            <p><strong>(1) Storm Data Source: </strong> <a href="http://www.ncdc.noaa.gov/stormevents/ftp.jsp">NOAA.GOV</a><br/>
+            <p><strong  style="font-size: 12px">Note: Page is best viewed in Google Chrome, Microsoft Edge.</strong><br/>
+            <strong>(1) Storm Data Source: </strong> <a href="http://www.ncdc.noaa.gov/stormevents/ftp.jsp">NOAA.GOV</a><br/>
             <strong>(2) Arkansas counties topo json Source: </strong>
                 <a href="https://raw.githubusercontent.com/UIUXEngineering-Data-Dist/data-dist-topojson-us-zipcodes/master/2013/us/states/counties/ar-counties.json">AR-COUNTIES.JSON</a><br/>
-             <strong>(3) Arkansas county level population Source: </strong> <a href="http://www.census.gov/data.html">US Census Bureau</a>
+             <strong>(3) Arkansas county level population Source: </strong> <a href="http://www.census.gov/data.html">US Census Bureau</a><br/>
+             <strong>(4) Google Charts GeoMap, d3.js is used to develop the above charts.</strong><br/>
+             <strong>(5) Refer here for rough data collection steps performed: </strong>
+                <a href="http://rpubs.com/pskumar/DATA608">Data Collection</a><br/>
             </p>
 		</div>
         
@@ -467,7 +472,7 @@
         
  
        function drawMapVisualization(year) {
-         $.get("data/sei_StateImpactSummary.csv", function(csvString) {
+         $.get("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_StateImpactSummary.csv", function(csvString) {
 
           var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 
@@ -475,7 +480,7 @@
 
           var data = new google.visualization.DataTable();
              
-          $.get("data/sei_StateEvents.csv", function(csvEventsString){
+          $.get("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_StateEvents.csv", function(csvEventsString){
               
                  var seData = $.csv.toArrays(csvEventsString, {onParseValue: $.csv.hooks.castToScalar});
                   
@@ -559,7 +564,7 @@
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
         svg1 = svg;
 
-        d3.csv("data/sei_EventImpactSummary.csv", function(error, data) {
+        d3.csv("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_EventImpactSummary.csv", function(error, data) {
           if (error) throw error;
 
           usEventsData = data;
@@ -677,7 +682,7 @@
 
         svg = svg1;
 
-        d3.csv("data/sei_EventImpactSummary.csv", function(error, data) {
+        d3.csv("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_EventImpactSummary.csv", function(error, data) {
           if (error) throw error;
 
           usEventsData = data;
@@ -829,10 +834,10 @@
         
         var totalDeaths =0 ,totalInuries = 0,totalCropsDamage = 0,totalPropertyDamage =0;
         // Load CSV
-        d3.csv("data/ar_county_pop.csv", function(data) {
+        d3.csv("https://raw.githubusercontent.com/psumank/DATA608/master/Data/ar_county_pop.csv", function(data) {
              
             //Load SEI Data
-            d3.csv("data/sei_ARSummary.csv", function(seiData) {
+            d3.csv("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_ARSummary.csv", function(seiData) {
 
                     var arYearlyStormData = seiData.filter(function(e) {
                         return (e['YEAR'] == selYear && e['EVENT_TYPE'] == selEvent)
@@ -841,7 +846,7 @@
                     console.log("Storm data length: " + arYearlyStormData.length);
         
             // Load TopoJSON
-            d3.json("data/ar-counties.json", function(error, ar) {
+            d3.json("https://raw.githubusercontent.com/psumank/DATA608/master/Data/ar-counties.json", function(error, ar) {
                 
 
                 for (var i = 0; i < data.length; i++) {
@@ -1088,10 +1093,10 @@
         var totalDeaths =0 ,totalInuries = 0,totalCropsDamage = 0,totalPropertyDamage =0;
         
         // Load CSV
-        d3.csv("data/ar_county_pop.csv", function(data) {
+        d3.csv("https://raw.githubusercontent.com/psumank/DATA608/master/Data/ar_county_pop.csv", function(data) {
              
             //Load SEI Data
-            d3.csv("data/sei_ARSummary.csv", function(seiData) {
+            d3.csv("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_ARSummary.csv", function(seiData) {
 
                     var arYearlyStormData = seiData.filter(function(e) {
                         return (e['YEAR'] == selYear && e['EVENT_TYPE'] == selEvent)
@@ -1100,7 +1105,7 @@
                     console.log("Storm data length: " + arYearlyStormData.length);
         
             // Load TopoJSON
-            d3.json("data/ar-counties.json", function(error, ar) {
+            d3.json("https://raw.githubusercontent.com/psumank/DATA608/master/Data/ar-counties.json", function(error, ar) {
                 
 
                 for (var i = 0; i < data.length; i++) {
