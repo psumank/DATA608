@@ -463,7 +463,6 @@
             selectValue = d3.select('#selectStromType').property('value')
             selEvent = selectValue;
             updateARMap();
-            console.log('selected value is:' + selectValue)
         };
 
        // google.charts.load('current', {'packages': ['geomap']});
@@ -476,15 +475,12 @@
 
           var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
 
-          console.log(arrayData.length);
-
           var data = new google.visualization.DataTable();
              
           $.get("https://raw.githubusercontent.com/psumank/DATA608/master/Data/sei_StateEvents.csv", function(csvEventsString){
               
                  var seData = $.csv.toArrays(csvEventsString, {onParseValue: $.csv.hooks.castToScalar});
-                  
-                 console.log("se events for state: " + seData.length);
+
 
                   data.addColumn('string', 'STATE');
                   data.addColumn('number', 'DEATH_COUNT');
@@ -578,11 +574,8 @@
                 var y0 = 0;
               
                 d.impacts = color.domain().map(function(name) { 
-                    console.log('name:'+ name + 'cnt' +  d[name] + 'y0' + y0);
                     return {name: name, y0: y0, y1: y0 += +d[name]}; 
                 });
-              
-                console.log('impacts:' + d.impacts);
               
                 d.total = d.impacts[d.impacts.length - 1].y1;
           });
@@ -696,7 +689,6 @@
                 var y0 = 0;
               
                 d.impacts = color.domain().map(function(name) { 
-                    console.log('name:'+ name + 'cnt' +  d[name] + 'y0' + y0);
                     return {name: name, y0: y0, y1: y0 += +d[name]}; 
                 });
               
@@ -842,8 +834,7 @@
                     var arYearlyStormData = seiData.filter(function(e) {
                         return (e['YEAR'] == selYear && e['EVENT_TYPE'] == selEvent)
                     });
-                
-                    console.log("Storm data length: " + arYearlyStormData.length);
+
         
             // Load TopoJSON
             d3.json("https://raw.githubusercontent.com/psumank/DATA608/master/Data/ar-counties.json", function(error, ar) {
@@ -853,8 +844,6 @@
 
                     var dataTown = data[i].county;
                     var dataPop = parseFloat(data[i].population);
-
-                    console.log(dataTown);
 
                     for (var j = 0; j < ar.objects.counties.geometries.length; j++) {
                         var jsonTown = ar.objects.counties.geometries[j].properties.name;
@@ -1102,8 +1091,6 @@
                         return (e['YEAR'] == selYear && e['EVENT_TYPE'] == selEvent)
                     });
                 
-                    console.log("Storm data length: " + arYearlyStormData.length);
-        
             // Load TopoJSON
             d3.json("https://raw.githubusercontent.com/psumank/DATA608/master/Data/ar-counties.json", function(error, ar) {
                 
@@ -1112,8 +1099,6 @@
 
                     var dataTown = data[i].county;
                     var dataPop = parseFloat(data[i].population);
-
-                    console.log(dataTown);
 
                     for (var j = 0; j < ar.objects.counties.geometries.length; j++) {
                         var jsonTown = ar.objects.counties.geometries[j].properties.name;
